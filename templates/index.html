@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+      <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+      integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Oregano|Raleway&display=swap"
+      rel="stylesheet"
+    />
+    <!-- import the webpage's stylesheet -->
+    <link rel="stylesheet" href={{ url_for('static', filename='style.css') }} />
+    <!-- import the webpage's javascript file -->
+    <script src={{ url_for('static', filename='script.js') }} defer></script>
+    <title> Art </title>
+</head>
+<body>
+<!--navigation button in top right corner-->
+    <div class="hero-image">
+      <div id="mySidebar" class="sidebar">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"
+          >&times;</a
+        >
+        
+        <a href="/">Home</a>
+        <a href="/art">Art</a>
+        <a href="/clothing">Clothing</a>
+        <a href="/entertainment">Entertainment & News</a>
+        <a href="/food">Food</a>
+        <a href="/fun">Fun/Games</a>
+        <a href="/hair">Hair Care</a>
+        <a href="/hairaccessories">Hair Accessories</a>
+        <a href="/decor">Home Decor</a>
+        <a href="/household">Household Essentials</a>
+        <a href="/kids">Kids</a>
+        <a href="/learning">Learning</a>
+        <a href="/marketplaces">Marketplaces</a>
+        <a href="/services">Services</a>
+        <a href="/skin">Skin Care & Hygiene</a>
+        <a href="/stationery">Stationery</a>
+        <a href="/tech">Technology</a>
+        <a href="/alcohol">Wine & Liquor</a>
+      </div>
+
+      <div id="main">
+        <button id="menubtn" class="openbtn" onclick="openNav()">&#9776;</button>
+      </div>
+
+      <!--Business Name and Logo inside of Hero Image-->
+      <div class="hero-text">
+        <a href="/"><h1 style="color:white; ">Black Owned & Natural</h1></a>
+        <!-- <h6 class="text-wrap font-italic" style="width:25rem">
+          This website was created with the intent to support and patronize more
+          Black Owned Businesses across different industries and share those
+          businesses with others.
+        </h6> -->
+
+        <br />
+      </div>
+    </div>
+
+{# everything above this will be the template to load on all pages #}
+{% block content %}
+
+ {# anything inside of the block content will only appear on the current page #}
+     <br />
+    <div class="container  font-bold text-center ">
+      
+        <h2 class="text-wrap">
+          Featured Brands
+        </h2>
+      
+    </div>
+
+    <br /><br />
+
+<div class="container">
+  <div class="row">
+  {% for business in featured_businesses %} 
+  {# loop over each record in businesses (created in the main.py) and fill in the data in each field to create the card
+  
+  col-xs-6 col-sm-4 col-md-3 col-lg-2 #}
+  
+  <div class="card-deck col-xs-6 col-sm-4 col-md-3 col-lg-3" style="justify-content:center">
+    
+    <div class="card text-center ">
+    
+        <img
+    src={{business["fields"]["Business Photo"][0]["thumbnails"]["large"]["url"]}}
+    class="card-img-top"
+    alt={{business["fields"]["Business Name"]}}
+  />
+  <div class="card-body">
+      <p class="card-text"><small class="text-muted">Photo Credit: {{business["fields"]["Business Name"]}}</small></p>
+    <h5 class="card-title">{{business["fields"]["Business Name"]}}</h5>
+
+    {% for item in business["fields"]["Things Sold"] %}
+    <p class="card-text badge badge-pill badge-light" style="margin-bottom:0.425rem"><small>{{item}}</small></p>
+    {% endfor %}
+    <br>
+    <a href={{business["fields"]["Website Link"]}} class="btn btn-info"
+      >Visit Website</a
+    >
+  </div>
+</div> 
+</div>
+<br><br>
+    {% endfor %}
+  <br><br>
+  </div>
+</div>
+
+{% endblock %}
+{# everything below this will be the template to load on all pages #}
+
+    {# 
+    <!-- Set up with Airtable Fields
+<div class="card text-center">
+  <img
+    src="{{Business Photo}}"
+    class="card-img-top"
+    alt="{{Business Name}}"
+  />
+  <div class="card-body">
+      <p class="card-text"><small class="text-muted">Photo Credit: {{Business Name}}</small></p>
+    <h5 class="card-title">{{Business Name}}</h5>
+    <p class="card-text">{{Things Sold}}</p>
+    <a href="{{Website Link}}" class="btn btn-info"
+      >Visit Website</a
+    >
+  </div>
+</div> -->
+ #}
+
+
+<!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+      integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+      crossorigin="anonymous"
+    ></script>
+</body>
+</html>
+

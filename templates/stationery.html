@@ -1,0 +1,62 @@
+{# <!-- load the template from index.html with menu, hero image and hero text to prevent having to put it on every page  --> #}
+
+{% extends "index.html" %}
+
+{% block content %}
+
+ <br />
+    <div class="container  font-bold text-center ">
+      
+        <h2 class="text-wrap">
+          Stationery
+        </h2>
+      
+    </div>
+
+    <br /><br />
+
+
+{#
+<!-- This should run and pull each business from the corresponding table in the Airtable database. 
+Once it finds a business, it will pull in the data for the Photo, Photo Credit, Business Name, Things Sold, and the Website Link -->
+<!-- business["fields"]["Business Photo"][0]["url"] - format to parse through each level of the records in json format  -->
+<!-- test idea - add a for loop in between to only run 5 times???  -->
+#}
+
+<div class="container">
+  <div class="row">
+  {% for business in stationery_businesses %} 
+  {# loop over each record in businesses (created in the main.py) and fill in the data in each field to create the card
+  
+  col-xs-6 col-sm-4 col-md-3 col-lg-2 #}
+  
+  <div class="card-deck col-xs-6 col-sm-4 col-md-3 col-lg-3" style="justify-content:center">
+    
+    <div class="card text-center ">
+    
+        <img
+    src={{business["fields"]["Business Photo"][0]["thumbnails"]["large"]["url"]}}
+    class="card-img-top"
+    alt={{business["fields"]["Business Name"]}}
+  />
+  <div class="card-body">
+      <p class="card-text"><small class="text-muted">Photo Credit: {{business["fields"]["Business Name"]}}</small></p>
+    <h5 class="card-title">{{business["fields"]["Business Name"]}}</h5>
+
+    {% for item in business["fields"]["Things Sold"] %}
+    <p class="card-text badge badge-pill badge-light" style="margin-bottom:0.425rem"><small>{{item}}</small></p>
+    {% endfor %}
+    <br>
+    <a href={{business["fields"]["Website Link"]}} class="btn btn-info"
+      >Visit Website</a
+    >
+  </div>
+</div> 
+</div>
+<br><br>
+    {% endfor %}
+  <br><br>
+  </div>
+</div>
+
+{% endblock %}
