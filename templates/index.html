@@ -22,7 +22,21 @@
     <link rel="stylesheet" href={{ url_for('static', filename='style.css') }} />
     <!-- import the webpage's javascript file -->
     <script src={{ url_for('static', filename='script.js') }} defer></script>
-    <title> Art </title>
+    <title> Black Owned & Natural </title>
+    <!-- <style>
+/* side bar open styles */
+body.menu-open .sidebar {
+  width: 250px;
+}
+
+body.menu-open #main {
+  margin-left: 250px;
+}
+
+body.menu-open #menubtn {
+  display: none;
+}
+      </style> -->
 </head>
 <body>
 <!--navigation button in top right corner-->
@@ -50,6 +64,8 @@
         <a href="/stationery">Stationery</a>
         <a href="/tech">Technology</a>
         <a href="/alcohol">Wine & Liquor</a>
+        <hr class="solid">
+        <a href="/about">About</a>
       </div>
 
       <div id="main">

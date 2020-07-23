@@ -100,6 +100,27 @@ a:hover {
   background-color: #444;
 }
 
+
+
+/* side bar open styles 
+when the menu is opened, JS will add a "menu-open" class to the body.
+the below will target the sidebar, main and menubtn when the menu is open */
+/* 7/23 - testing changing body to mySidebar and adding the menu-open class to it and the below css */
+/* body */
+body.menu-open .sidebar {
+  width: 250px;
+}
+
+/* body */
+body.menu-open #main {
+  margin-left: 250px;
+}
+
+/* body */
+#mySidebar.menu-open #menubtn {
+  display: none;
+}
+
 /* Scrollbar CSS */
 /* width */
 ::-webkit-scrollbar {
@@ -112,6 +133,7 @@ a:hover {
   border-radius: 10px;
 }
  
+
 /* Handle */
 ::-webkit-scrollbar-thumb {
   background: grey; 
@@ -121,6 +143,11 @@ a:hover {
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
   background: #38393b; 
+}
+
+hr.solid {
+  
+  border-top: .5px solid #212529;
 }
 
 #main {

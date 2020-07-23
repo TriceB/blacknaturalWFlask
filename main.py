@@ -49,7 +49,6 @@ def home():
     return render_template(
         "index.html", featured_businesses=records
     )  # render the tech.html page and create a variable called businesses and store the records from the airtable base
-    return render_template("index.html")
 
 
 @app.route("/alcohol")
@@ -465,7 +464,16 @@ def tech():
         "tech.html", tech_businesses=records
     )  # render the tech.html page and create a variable called businesses and store the records from the airtable base
 
+
+@app.route('/about')
+def about():
+    
+    return render_template("about.html")  # render the about.html 
+    
+
 if __name__ == '__main__':
+    app.jinja_env.auto_reload = True
+    app.config['TEMPLATES_AUTO_RELOAD'] = True
     app.run(
         host=
         '0.0.0.0',  # Establishes the host, required for repl to detect the site
