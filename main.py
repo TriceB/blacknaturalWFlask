@@ -466,6 +466,24 @@ def tech():
     )  # render the tech.html page and create a variable called businesses and store the records from the airtable base
 
 
+@app.route('/wellness')
+def wellness():
+    base_key = os.environ['BASE']  # Airtable base key
+    table_name = 'Wellness'  # Airtable table name
+    airtable = Airtable(
+        base_key, table_name, api_key=os.environ['AIR_API']
+    )  # Airtable authentication with personal Airtable Account key
+
+    records = airtable.get_all(
+        sort="Business Name"
+    )  # Get all the records from the table and sort them (default sort is ascending)
+    # pprint(records) #this will print all the records from the table to the terminal in better format that print
+
+    return render_template(
+        "wellness.html", wellness_businesses=records
+    )  # render the wellness.html page and create a variable called businesses and store the records from the airtable base
+
+
 @app.route('/about')
 def about():
     
