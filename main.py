@@ -288,6 +288,23 @@ def fun():
     )  # render the fun.html page and create a variable called businesses and store the records from the airtable base
 
 
+@app.route("/gardening")
+def gardening():
+    base_key = os.environ['BASE']  # Airtable base key
+    table_name = 'Gardening'  # Airtable table name
+    airtable = Airtable(
+        base_key, table_name, api_key=os.environ['AIR_API']
+    )  # Airtable authentication with personal Airtable Account key
+
+    records = airtable.get_all(
+        sort="Business Name"
+    )  # Get all the records from the table and sort them (default sort is ascending)
+    # pprint(records) #this will print all the records from the table to the terminal in better format that print
+
+    return render_template(
+        "gardening.html", gardening_businesses=records
+    )  # render the gardening.html page and create a variable called businesses and store the records from the airtable base
+
 @app.route("/hair")
 def hair():
     base_key = os.environ['BASE']  # Airtable base key
