@@ -196,3 +196,33 @@ hr.solid {
 .collection-sort:first-child {
 	padding-right: 20px;
 } */
+
+
+/* accordian dropdown in menu bar */
+.sidebar .dropdown-btn {
+ 
+  text-decoration: none;
+  padding:8px 8px 8px 32px;
+  color: #818181;
+  display: block;
+  border: none;
+  background: none;
+  width: 100%;
+  
+  cursor: pointer;
+  outline: none;
+}
+/* Add an active class to the active dropdown button */
+.active {
+  
+  color: grey;
+}
+
+/* Dropdown container (hidden by default). 
+Optional: add a lighter background color and 
+some left padding to change the design of the dropdown content */
+.dropdown-container {
+  display: none;
+  background-color: #262626;
+  padding-left: 2px;
+}
