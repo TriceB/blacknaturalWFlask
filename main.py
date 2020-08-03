@@ -5,22 +5,6 @@ Goal: Use Airtable as a database for Businesses
 
 Currently using Bootstrap to create cards which display the Business, Photo, short info, and link on page
 
-Set up with Airtable Fields
-<div class="card text-center">
-  <img
-    src="{{Business Photo}}"
-    class="card-img-top"
-    alt="{{Business Name}}"
-  />
-  <div class="card-body">
-      <p class="card-text"><small class="text-muted">Photo Credit: {{Business Name}}</small></p>
-    <h5 class="card-title">{{Business Name}}</h5>
-    <p class="card-text">{{Things Sold}}</p>
-    <a href="{{Website Link}}" class="btn btn-info"
-      >Visit Website</a
-    >
-  </div>
-</div>
 """
 
 import os

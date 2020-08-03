@@ -18,6 +18,9 @@
       href="https://fonts.googleapis.com/css?family=Oregano|Raleway&display=swap"
       rel="stylesheet"
     />
+    <!-- import FontAwesome CDN -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css" integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
+
     <!-- import the webpage's stylesheet -->
     <link rel="stylesheet" href={{ url_for('static', filename='style.css') }} />
     <!-- import the webpage's javascript file -->
@@ -85,6 +88,10 @@ body.menu-open #menubtn {
         <button id="menubtn" class="openbtn" onclick="openNav()">&#9776;</button>
       </div>
 
+      <!-- <button onclick="scrollToTopFunction()" id="topBtn" title="Scroll To Top"> <i class="fas fa-chevron-circle-up"></i> </button> -->
+
+      <i onclick="scrollToTopFunction()" id="topBtn" title="Scroll To Top" class="fas fa-chevron-circle-up fa-3x" style="color: rgb(86 132 105 / 50%) "></i> <!-- alternate color - #304931 -->
+
       <!--Business Name and Logo inside of Hero Image-->
       <div class="hero-text">
         <a href="/"><h1 style="color:white; ">Naturally Black Owned</h1></a>
@@ -138,7 +145,7 @@ body.menu-open #menubtn {
     <p class="card-text badge badge-pill badge-light" style="margin-bottom:0.425rem"><small>{{item}}</small></p>
     {% endfor %}
     <br>
-    <a href={{business["fields"]["Website Link"]}} class="btn btn-info"
+    <a href={{business["fields"]["Website Link"]}} class="btn btn-info" target="_blank"
       >Visit Website</a
     >
   </div>

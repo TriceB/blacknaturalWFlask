@@ -74,6 +74,7 @@ a:hover {
   text-decoration: none;
 }
 
+
 /* Position and style the close button (top right corner) */
 .sidebar .closebtn {
   position: absolute;
@@ -171,33 +172,6 @@ hr.solid {
 
 }
 
-/* CSS for the category filter - currently not working */
-
-/* .product-filter {
-  display: flex;
-  padding: 30px 0;
-}
-
-.product-filter h1 {
-  flex-grow: 1;
-}
-
-.sort {
-  display: flex;
-  align-self: flex-end;
-}
-
-.collection-sort {
-  display: flex;
-  flex-direction: column;
-  padding: 0px 10px 0px 10px;
-}
-
-.collection-sort:first-child {
-	padding-right: 20px;
-} */
-
-
 /* accordian dropdown in menu bar */
 .sidebar .dropdown-btn {
  
@@ -226,3 +200,42 @@ some left padding to change the design of the dropdown content */
   background-color: #262626;
   padding-left: 2px;
 }
+
+
+/* CSS for Scroll To Top Button */
+#topBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 99;
+  cursor: pointer;
+  
+}
+
+
+/* CSS for the category filter - currently not working */
+
+/* .product-filter {
+  display: flex;
+  padding: 30px 0;
+}
+
+.product-filter h1 {
+  flex-grow: 1;
+}
+
+.sort {
+  display: flex;
+  align-self: flex-end;
+}
+
+.collection-sort {
+  display: flex;
+  flex-direction: column;
+  padding: 0px 10px 0px 10px;
+}
+
+.collection-sort:first-child {
+	padding-right: 20px;
+} */

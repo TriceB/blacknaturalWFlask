@@ -2,7 +2,7 @@
 function openNav() {
  // document.getElementById("mySidebar").style.width = "250px";
  // document.getElementById("main").style.marginLeft = "250px";
-  // document.getElementById("menubtn").style.display = 'none';
+  document.getElementById("menubtn").style.display = 'none';
   //document.getElementsByTagName("body")[0] - this will only add the word "class" instead of "class="menu-open"" as expected. it works when using other elements but not the body
   document.getElementsByTagName("body")[0].classList.add("menu-open");
 
@@ -21,11 +21,10 @@ function closeNav() {
   /*
   document.getElementById("mySidebar").style.width = "0";
   document.getElementById("main").style.marginLeft = "0";
-  
   document.getElementById("menubtn").style.display = 'initial';
 */
-
   document.getElementsByTagName("body")[0].classList.remove("menu-open");
+  document.getElementById("menubtn").style.display = 'block';
 }
 //keep working on fixing this - 7/20
 // window.addEventListener('click', function(evt){
@@ -61,6 +60,7 @@ window.addEventListener("click", function(event) {
       event.target != menuBtn) {
     closeNav();
   }
+  
 });
 
 // accordian js so that menu expands when "+" is clicked and collapsed when "-" is clicked
@@ -79,4 +79,28 @@ for (i = 0; i < dropdown.length; i++) {
   dropdownContent.style.display = "block";
   }
   });
+}
+
+// Javascript for Scroll To Top Button
+//Get the button
+var toTopBtn = document.getElementById("topBtn");
+
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 ||
+  document.documentElement.scrollTop > 20) {
+    toTopBtn.style.display = "block";
+  }
+  else {
+    toTopBtn.style.display = "none";
+  }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+
+function scrollToTopFunction () {
+  document.body.scrollTop = 0; // For Safari
+  document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
 }
