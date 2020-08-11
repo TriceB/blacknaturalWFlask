@@ -17,6 +17,7 @@ h1 {
   /* Use "linear-gradient" to add a darken background effect to the image. This will make the text easier to read */
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
     url("https://cdn.glitch.com/885a6e82-de3c-43bb-ba6e-218e66f73c7b%2Fleaf-plant-green-carved-vegetation-branch.jpg?v=1591903509932");
+    
 
   /* Set a specific height */
   height: 40vh;
