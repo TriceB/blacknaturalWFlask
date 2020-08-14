@@ -214,6 +214,42 @@ some left padding to change the design of the dropdown content */
   
 }
 
+/* add spacing in between each row of cards */
+.card-deck {
+  padding-bottom: 15px;
+} 
+
+/* add box shadow and remove card border */
+.card {
+  border: none;
+  -webkit-box-shadow: 0px 0px 8px 0px rgba(0,0,0,0.2);
+  -moz-box-shadow: 0px 0px 8px 0px rgba(0,0,0,0.2);
+  box-shadow: 0px 0px 8px 0px rgba(0,0,0,0.2);
+} 
+
+.card-body {
+  padding: 1rem;
+}
+
+/* remove footer default background color and top border */
+.card-footer {
+  background-color: white;
+  border: none;
+  margin-top: 0px;
+} 
+
+
+/* From Coach Mike 
+for the spacing on the cards and the drop shadow you could do something like this but you may have to adjust it for your different media queries 
+.card-deck .card {
+  -ms-flex: 1 0 0%;
+  flex: 1 0 0%;
+  margin: 10px;
+  -webkit-box-shadow: 0px 0px 8px 0px rgba(0,0,0,0.2);
+  -moz-box-shadow: 0px 0px 8px 0px rgba(0,0,0,0.2);
+  box-shadow: 0px 0px 8px 0px rgba(0,0,0,0.2);
+}*/
+
 
 /* CSS for the category filter - currently not working */
 

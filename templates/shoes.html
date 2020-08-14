@@ -34,28 +34,29 @@ Once it finds a business, it will pull in the data for the Photo, Photo Credit, 
     
     <div class="card text-center ">
     
-        <img
-    src={{business["fields"]["Business Photo"][0]["thumbnails"]["large"]["url"]}}
-    class="card-img-top"
-    alt={{business["fields"]["Business Name"]}}
-  />
-  <div class="card-body">
+      <img
+        src={{business["fields"]["Business Photo"][0]["thumbnails"]["large"]["url"]}}
+        class="card-img-top"
+        alt={{business["fields"]["Business Name"]}}
+      />
+    <div class="card-body">
       <p class="card-text"><small class="text-muted">Photo Credit: {{business["fields"]["Business Name"]}}</small></p>
-    <h5 class="card-title">{{business["fields"]["Business Name"]}}</h5>
+      <h5 class="card-title">{{business["fields"]["Business Name"]}}</h5>
 
-    {% for item in business["fields"]["Things Sold"] %}
-    <p class="card-text badge badge-pill badge-light" style="margin-bottom:0.425rem"><small>{{item}}</small></p>
-    {% endfor %}
-    <br>
-    <a href={{business["fields"]["Website Link"]}} class="btn btn-info" target="_blank"
-      >Visit Website</a
-    >
-  </div>
-</div> 
+      {% for item in business["fields"]["Things Sold"] %}
+      <p class="card-text badge badge-pill badge-light" style="margin-bottom:0.425rem"><small>{{item}}</small></p>
+      {% endfor %}
+    </div>
+    
+    <div class="card-footer">
+      <a href={{business["fields"]["Website Link"]}} class="btn btn-info" target="_blank"
+      >Visit Website</a>
+    </div>
+  </div> 
 </div>
-<br><br>
+
     {% endfor %}
-  <br><br>
+  
   </div>
 </div>
 
