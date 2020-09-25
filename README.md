@@ -1,5 +1,6 @@
 # Naturally Black Owned
 This is a personal project to create a directory of Black Owned Businesses across different industries. 
+Link to live website - http://www.naturallyblackowned.com/
 
 ![](https://cdn.glitch.com/885a6e82-de3c-43bb-ba6e-218e66f73c7b%2FNaturally%20Black%20Owned%20site%20preview.jpg?v=1597177349296)
 
