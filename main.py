@@ -67,6 +67,19 @@ def art():
         sort="Business Name"
     )  # Get all the records from the table and sort them (default sort is ascending)
     # pprint(records) #this will print all the records from the table to the terminal in better format that print
+	
+	# TODO: code below from Coach Mike
+	# add classes to build a filter for each page
+
+    # updated_records = list()
+    # # Loop through every record, then add a new property
+    # for record in records:
+    #   categories = record['fields']['Things Sold']
+    #   record['classNames'] = ' '.join(categories)
+
+
+    # art_classes = ()
+    # art_classes.append(airtable.get)
 
     return render_template(
         "art.html", art_businesses=records
