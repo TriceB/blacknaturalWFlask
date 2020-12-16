@@ -18,7 +18,11 @@ cleo==0.7.6
 click==7.1.2
 clikit==0.4.3
 <<<<<<< HEAD
+<<<<<<< HEAD
 cryptography>=3.2
+=======
+cryptography==3.2
+>>>>>>> origin/master
 =======
 cryptography==3.2
 >>>>>>> origin/master
