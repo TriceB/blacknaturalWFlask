@@ -78,7 +78,6 @@ poetry==1.0.5
 prompt-toolkit==3.0.5
 ptpython==3.0.2
 ptyprocess==0.6.0
-pyairtable==2.1.0
 pycodestyle==2.4.0
 pycparser==2.20
 pyflakes==2.1.1
