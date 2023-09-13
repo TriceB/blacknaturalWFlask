@@ -8,26 +8,26 @@ Currently using Bootstrap to create cards which display the Business, Photo, sho
 """
 
 import os
-import glfw
+# import glfw
 from flask import Flask, render_template
-from airtable import Airtable
-from pprint import pprint
-from flask import request
+# from airtable import Airtable
+# from pprint import pprint
+# from flask import request
+from pyairtable import Api
 
 app = Flask(__name__)
-
+api = Api(os.environ['AIR_PAT']) # New Airtable Private Access Key
 
 #this will render the index.html as the home page
 @app.route('/')
 def home():
     base_key = os.environ['BASE']  # Airtable base key
     table_name = 'Featured'  # Airtable table name
-    airtable = Airtable(
-        base_key, table_name, api_key=os.environ['AIR_API']
-    )  # Airtable authentication with personal Airtable Account key
+    airtable = api.table(base_key, table_name)  
+	# Airtable authentication with personal Airtable Account key
 
-    records = airtable.get_all(
-        sort="Business Name"
+    records = airtable.all(
+        sort=["Business Name"]
     )  # Get all the records from the table and sort them (default sort is ascending)
     # pprint(records) #this will print all the records from the table to the terminal in better format that print
 
@@ -40,12 +40,10 @@ def home():
 def alcohol():
     base_key = os.environ['BASE']  # Airtable base key
     table_name = 'Alcohol'  # Airtable table name
-    airtable = Airtable(
-        base_key, table_name, api_key=os.environ['AIR_API']
-    )  # Airtable authentication with personal Airtable Account key
+    airtable = api.table(base_key, table_name)  # Airtable authentication with personal Airtable Account key
 
-    records = airtable.get_all(
-        sort="Business Name"
+    records = airtable.all(
+        sort=["Business Name"]
     )  # Get all the records from the table and sort them (default sort is ascending)
     # pprint(records) #this will print all the records from the table to the terminal in better format that print
 
@@ -58,13 +56,11 @@ def alcohol():
 def art():
     base_key = os.environ['BASE']  # Airtable base key
     table_name = 'Art'  # Airtable table name
-    airtable = Airtable(
-        base_key, table_name, api_key=os.environ['AIR_API']
-    )  # Airtable authentication with personal Airtable Account key
-    # at = Airtable('BASE', 'AIR_API')
+    airtable = api.table(base_key, table_name)  # Airtable authentication with personal Airtable Account key
+    # at = Airtable('BASE', 'AIR_PAT')
     # at.get('Art')
-    records = airtable.get_all(
-        sort="Business Name"
+    records = airtable.all(
+        sort=["Business Name"]
     )  # Get all the records from the table and sort them (default sort is ascending)
     # pprint(records) #this will print all the records from the table to the terminal in better format that print
 	
@@ -90,12 +86,10 @@ def art():
 def accessories():
     base_key = os.environ['BASE']  # Airtable base key
     table_name = 'Clothing/Accessories'  # Airtable table name
-    airtable = Airtable(
-        base_key, table_name, api_key=os.environ['AIR_API']
-    )  # Airtable authentication with personal Airtable Account key
+    airtable = api.table(base_key, table_name)  # Airtable authentication with personal Airtable Account key
 
-    records = airtable.get_all(
-        sort="Business Name"
+    records = airtable.all(
+        sort=["Business Name"]
     )  # Get all the records from the table and sort them (default sort is ascending)
     # pprint(records) #this will print all the records from the table to the terminal in better format that print
 
@@ -108,12 +102,10 @@ def accessories():
 def casual():
     base_key = os.environ['BASE']  # Airtable base key
     table_name = 'Clothing/Casual'  # Airtable table name
-    airtable = Airtable(
-        base_key, table_name, api_key=os.environ['AIR_API']
-    )  # Airtable authentication with personal Airtable Account key
+    airtable = api.table(base_key, table_name)  # Airtable authentication with personal Airtable Account key
 
-    records = airtable.get_all(
-        sort="Business Name"
+    records = airtable.all(
+        sort=["Business Name"]
     )  # Get all the records from the table and sort them (default sort is ascending)
     # pprint(records) #this will print all the records from the table to the terminal in better format that print
 
@@ -126,12 +118,10 @@ def casual():
 def clothing():
     base_key = os.environ['BASE']  # Airtable base key
     table_name = 'Clothing/Dress'  # Airtable table name
-    airtable = Airtable(
-        base_key, table_name, api_key=os.environ['AIR_API']
-    )  # Airtable authentication with personal Airtable Account key
+    airtable = api.table(base_key, table_name)  # Airtable authentication with personal Airtable Account key
 
-    records = airtable.get_all(
-        sort="Business Name"
+    records = airtable.all(
+        sort=["Business Name"]
     )  # Get all the records from the table and sort them (default sort is ascending)
     # pprint(records) #this will print all the records from the table to the terminal in better format that print
 
@@ -144,12 +134,10 @@ def clothing():
 def merch():
     base_key = os.environ['BASE']  # Airtable base key
     table_name = 'Clothing/Merch'  # Airtable table name
-    airtable = Airtable(
-        base_key, table_name, api_key=os.environ['AIR_API']
-    )  # Airtable authentication with personal Airtable Account key
+    airtable = api.table(base_key, table_name)  # Airtable authentication with personal Airtable Account key
 
-    records = airtable.get_all(
-        sort="Business Name"
+    records = airtable.all(
+        sort=["Business Name"]
     )  # Get all the records from the table and sort them (default sort is ascending)
     # pprint(records) #this will print all the records from the table to the terminal in better format that print
 
@@ -162,12 +150,10 @@ def merch():
 def shoes():
     base_key = os.environ['BASE']  # Airtable base key
     table_name = 'Clothing/Shoes'  # Airtable table name
-    airtable = Airtable(
-        base_key, table_name, api_key=os.environ['AIR_API']
-    )  # Airtable authentication with personal Airtable Account key
+    airtable = api.table(base_key, table_name)  # Airtable authentication with personal Airtable Account key
 
-    records = airtable.get_all(
-        sort="Business Name"
+    records = airtable.all(
+        sort=["Business Name"]
     )  # Get all the records from the table and sort them (default sort is ascending)
     # pprint(records) #this will print all the records from the table to the terminal in better format that print
 
@@ -180,12 +166,10 @@ def shoes():
 def swim():
     base_key = os.environ['BASE']  # Airtable base key
     table_name = 'Clothing/Swim'  # Airtable table name
-    airtable = Airtable(
-        base_key, table_name, api_key=os.environ['AIR_API']
-    )  # Airtable authentication with personal Airtable Account key
+    airtable = api.table(base_key, table_name)  # Airtable authentication with personal Airtable Account key
 
-    records = airtable.get_all(
-        sort="Business Name"
+    records = airtable.all(
+        sort=["Business Name"]
     )  # Get all the records from the table and sort them (default sort is ascending)
     # pprint(records) #this will print all the records from the table to the terminal in better format that print
 
@@ -198,12 +182,10 @@ def swim():
 def undergarments():
     base_key = os.environ['BASE']  # Airtable base key
     table_name = 'Clothing/Undergarments'  # Airtable table name
-    airtable = Airtable(
-        base_key, table_name, api_key=os.environ['AIR_API']
-    )  # Airtable authentication with personal Airtable Account key
+    airtable = api.table(base_key, table_name)  # Airtable authentication with personal Airtable Account key
 
-    records = airtable.get_all(
-        sort="Business Name"
+    records = airtable.all(
+        sort=["Business Name"]
     )  # Get all the records from the table and sort them (default sort is ascending)
     # pprint(records) #this will print all the records from the table to the terminal in better format that print
 
@@ -216,12 +198,10 @@ def undergarments():
 def learning():
     base_key = os.environ['BASE']  # Airtable base key
     table_name = 'Educational'  # Airtable table name
-    airtable = Airtable(
-        base_key, table_name, api_key=os.environ['AIR_API']
-    )  # Airtable authentication with personal Airtable Account key
+    airtable = api.table(base_key, table_name)  # Airtable authentication with personal Airtable Account key
 
-    records = airtable.get_all(
-        sort="Business Name"
+    records = airtable.all(
+        sort=["Business Name"]
     )  # Get all the records from the table and sort them (default sort is ascending)
     # pprint(records) #this will print all the records from the table to the terminal in better format that print
 
@@ -234,12 +214,10 @@ def learning():
 def entertainment():
     base_key = os.environ['BASE']  # Airtable base key
     table_name = 'Entertainment'  # Airtable table name
-    airtable = Airtable(
-        base_key, table_name, api_key=os.environ['AIR_API']
-    )  # Airtable authentication with personal Airtable Account key
+    airtable = api.table(base_key, table_name)  # Airtable authentication with personal Airtable Account key
 
-    records = airtable.get_all(
-        sort="Business Name"
+    records = airtable.all(
+        sort=["Business Name"]
     )  # Get all the records from the table and sort them (default sort is ascending)
     # pprint(records) #this will print all the records from the table to the terminal in better format that print
 
@@ -252,13 +230,11 @@ def entertainment():
 def food():
     base_key = os.environ['BASE']  # Airtable base key
     table_name = 'Food/Drinks'  # Airtable table name
-    airtable = Airtable(
-        base_key, table_name, api_key=os.environ['AIR_API']
-    )  # Airtable authentication with personal Airtable Account key
-    # at = Airtable('BASE', 'AIR_API')
+    airtable = api.table(base_key, table_name)  # Airtable authentication with personal Airtable Account key
+    # at = Airtable('BASE', 'AIR_PAT')
     # at.get('Art')
-    records = airtable.get_all(
-        sort="Business Name"
+    records = airtable.all(
+        sort=["Business Name"]
     )  # Get all the records from the table and sort them (default sort is ascending)
     # pprint(records) #this will print all the records from the table to the terminal in better format that print
 
@@ -271,12 +247,10 @@ def food():
 def fun():
     base_key = os.environ['BASE']  # Airtable base key
     table_name = 'Fun/Games'  # Airtable table name
-    airtable = Airtable(
-        base_key, table_name, api_key=os.environ['AIR_API']
-    )  # Airtable authentication with personal Airtable Account key
+    airtable = api.table(base_key, table_name)  # Airtable authentication with personal Airtable Account key
 
-    records = airtable.get_all(
-        sort="Business Name"
+    records = airtable.all(
+        sort=["Business Name"]
     )  # Get all the records from the table and sort them (default sort is ascending)
     # pprint(records) #this will print all the records from the table to the terminal in better format that print
 
@@ -289,12 +263,10 @@ def fun():
 def gardening():
     base_key = os.environ['BASE']  # Airtable base key
     table_name = 'Gardening'  # Airtable table name
-    airtable = Airtable(
-        base_key, table_name, api_key=os.environ['AIR_API']
-    )  # Airtable authentication with personal Airtable Account key
+    airtable = api.table(base_key, table_name)  # Airtable authentication with personal Airtable Account key
 
-    records = airtable.get_all(
-        sort="Business Name"
+    records = airtable.all(
+        sort=["Business Name"]
     )  # Get all the records from the table and sort them (default sort is ascending)
     # pprint(records) #this will print all the records from the table to the terminal in better format that print
 
@@ -306,12 +278,10 @@ def gardening():
 def hair():
     base_key = os.environ['BASE']  # Airtable base key
     table_name = 'Hair'  # Airtable table name
-    airtable = Airtable(
-        base_key, table_name, api_key=os.environ['AIR_API']
-    )  # Airtable authentication with personal Airtable Account key
+    airtable = api.table(base_key, table_name)  # Airtable authentication with personal Airtable Account key
 
-    records = airtable.get_all(
-        sort="Business Name"
+    records = airtable.all(
+        sort=["Business Name"]
     )  # Get all the records from the table and sort them (default sort is ascending)
     # pprint(records) #this will print all the records from the table to the terminal in better format that print
 
@@ -324,12 +294,10 @@ def hair():
 def hairaccessories():
     base_key = os.environ['BASE']  # Airtable base key
     table_name = 'Hair Accessories'  # Airtable table name
-    airtable = Airtable(
-        base_key, table_name, api_key=os.environ['AIR_API']
-    )  # Airtable authentication with personal Airtable Account key
+    airtable = api.table(base_key, table_name)  # Airtable authentication with personal Airtable Account key
 
-    records = airtable.get_all(
-        sort="Business Name"
+    records = airtable.all(
+        sort=["Business Name"]
     )  # Get all the records from the table and sort them (default sort is ascending)
     # pprint(records) #this will print all the records from the table to the terminal in better format that print
 
@@ -342,12 +310,10 @@ def hairaccessories():
 def decor():
     base_key = os.environ['BASE']  # Airtable base key
     table_name = 'Home Decor'  # Airtable table name
-    airtable = Airtable(
-        base_key, table_name, api_key=os.environ['AIR_API']
-    )  # Airtable authentication with personal Airtable Account key
+    airtable = api.table(base_key, table_name)  # Airtable authentication with personal Airtable Account key
 
-    records = airtable.get_all(
-        sort="Business Name"
+    records = airtable.all(
+        sort=["Business Name"]
     )  # Get all the records from the table and sort them (default sort is ascending)
     # pprint(records) #this will print all the records from the table to the terminal in better format that print
 
@@ -360,12 +326,10 @@ def decor():
 def household():
     base_key = os.environ['BASE']  # Airtable base key
     table_name = 'Household Essentials'  # Airtable table name
-    airtable = Airtable(
-        base_key, table_name, api_key=os.environ['AIR_API']
-    )  # Airtable authentication with personal Airtable Account key
+    airtable = api.table(base_key, table_name)  # Airtable authentication with personal Airtable Account key
 
-    records = airtable.get_all(
-        sort="Business Name"
+    records = airtable.all(
+        sort=["Business Name"]
     )  # Get all the records from the table and sort them (default sort is ascending)
     # pprint(records) #this will print all the records from the table to the terminal in better format that print
 
@@ -378,12 +342,10 @@ def household():
 def kids():
     base_key = os.environ['BASE']  # Airtable base key
     table_name = 'Kids'  # Airtable table name
-    airtable = Airtable(
-        base_key, table_name, api_key=os.environ['AIR_API']
-    )  # Airtable authentication with personal Airtable Account key
+    airtable = api.table(base_key, table_name)  # Airtable authentication with personal Airtable Account key
 
-    records = airtable.get_all(
-        sort="Business Name"
+    records = airtable.all(
+        sort=["Business Name"]
     )  # Get all the records from the table and sort them (default sort is ascending)
     # pprint(records) #this will print all the records from the table to the terminal in better format that print
 
@@ -396,12 +358,10 @@ def kids():
 def marketplaces():
     base_key = os.environ['BASE']  # Airtable base key
     table_name = 'Marketplaces'  # Airtable table name
-    airtable = Airtable(
-        base_key, table_name, api_key=os.environ['AIR_API']
-    )  # Airtable authentication with personal Airtable Account key
+    airtable = api.table(base_key, table_name)  # Airtable authentication with personal Airtable Account key
 
-    records = airtable.get_all(
-        sort="Business Name"
+    records = airtable.all(
+        sort=["Business Name"]
     )  # Get all the records from the table and sort them (default sort is ascending)
     # pprint(records) #this will print all the records from the table to the terminal in better format that print
 
@@ -414,12 +374,10 @@ def marketplaces():
 def services():
     base_key = os.environ['BASE']  # Airtable base key
     table_name = 'Services'  # Airtable table name
-    airtable = Airtable(
-        base_key, table_name, api_key=os.environ['AIR_API']
-    )  # Airtable authentication with personal Airtable Account key
+    airtable = api.table(base_key, table_name)  # Airtable authentication with personal Airtable Account key
 
-    records = airtable.get_all(
-        sort="Business Name"
+    records = airtable.all(
+        sort=["Business Name"]
     )  # Get all the records from the table and sort them (default sort is ascending)
     # pprint(records) #this will print all the records from the table to the terminal in better format that print
 
@@ -432,12 +390,10 @@ def services():
 def skin():
     base_key = os.environ['BASE']  # Airtable base key
     table_name = 'Skin Care/Hygiene'  # Airtable table name
-    airtable = Airtable(
-        base_key, table_name, api_key=os.environ['AIR_API']
-    )  # Airtable authentication with personal Airtable Account key
+    airtable = api.table(base_key, table_name)  # Airtable authentication with personal Airtable Account key
 
-    records = airtable.get_all(
-        sort="Business Name"
+    records = airtable.all(
+        sort=["Business Name"]
     )  # Get all the records from the table and sort them (default sort is ascending)
     # pprint(records) #this will print all the records from the table to the terminal in better format that print
 
@@ -449,12 +405,10 @@ def skin():
 def stationery():
     base_key = os.environ['BASE']  # Airtable base key
     table_name = 'Stationery'  # Airtable table name
-    airtable = Airtable(
-        base_key, table_name, api_key=os.environ['AIR_API']
-    )  # Airtable authentication with personal Airtable Account key
+    airtable = api.table(base_key, table_name)  # Airtable authentication with personal Airtable Account key
 
-    records = airtable.get_all(
-        sort="Business Name"
+    records = airtable.all(
+        sort=["Business Name"]
     )  # Get all the records from the table and sort them (default sort is ascending)
     # pprint(records) #this will print all the records from the table to the terminal in better format that print
 
@@ -466,12 +420,10 @@ def stationery():
 def tech():
     base_key = os.environ['BASE']  # Airtable base key
     table_name = 'Tech'  # Airtable table name
-    airtable = Airtable(
-        base_key, table_name, api_key=os.environ['AIR_API']
-    )  # Airtable authentication with personal Airtable Account key
+    airtable = api.table(base_key, table_name)  # Airtable authentication with personal Airtable Account key
 
-    records = airtable.get_all(
-        sort="Business Name"
+    records = airtable.all(
+        sort=["Business Name"]
     )  # Get all the records from the table and sort them (default sort is ascending)
     # pprint(records) #this will print all the records from the table to the terminal in better format that print
 
@@ -484,12 +436,10 @@ def tech():
 def wellness():
     base_key = os.environ['BASE']  # Airtable base key
     table_name = 'Wellness'  # Airtable table name
-    airtable = Airtable(
-        base_key, table_name, api_key=os.environ['AIR_API']
-    )  # Airtable authentication with personal Airtable Account key
+    airtable = api.table(base_key, table_name)  # Airtable authentication with personal Airtable Account key
 
-    records = airtable.get_all(
-        sort="Business Name"
+    records = airtable.all(
+        sort=["Business Name"]
     )  # Get all the records from the table and sort them (default sort is ascending)
     # pprint(records) #this will print all the records from the table to the terminal in better format that print
 
