@@ -198,7 +198,7 @@ python-versions = ">=3.8"
 
 [[package]]
 name = "urllib3"
-version = "1.26.15"
+version = "2.0.4"
 description = "HTTP library with thread-safe connection pooling, file post, and more."
 category = "dev"
 optional = false
