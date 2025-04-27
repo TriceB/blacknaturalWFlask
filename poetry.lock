@@ -1,121 +1,1361 @@
 [[package]]
-name = "debugpy"
-version = "1.6.7.post1"
-description = "An implementation of the Debug Adapter Protocol for Python"
-category = "dev"
+category = "main"
+description = "Async http client/server framework (asyncio)"
+name = "aiohttp"
 optional = false
-python-versions = ">=3.7"
+python-versions = ">=3.6"
+version = "3.8.5"
+
+[package.dependencies]
+aiosignal = ">=1.1.2"
+async-timeout = ">=4.0.0a3,<5.0"
+attrs = ">=17.3.0"
+charset-normalizer = ">=2.0,<4.0"
+frozenlist = ">=1.1.1"
+multidict = ">=4.5,<7.0"
+yarl = ">=1.0,<2.0"
+
+[package.extras]
+speedups = ["aiodns", "brotli", "cchardet"]
 
 [[package]]
-name = "importlib-metadata"
-version = "6.8.0"
-description = "Read metadata from Python packages"
+category = "main"
+description = "aiosignal: a list of registered asynchronous callbacks"
+name = "aiosignal"
+optional = false
+python-versions = ">=3.9"
+version = "1.3.2"
+
+[package.dependencies]
+frozenlist = ">=1.1.0"
+
+[[package]]
+category = "main"
+description = "UNKNOWN"
+name = "airtable"
+optional = false
+python-versions = "*"
+version = "0.3.1"
+
+[package.dependencies]
+requests = ">=2.5.3"
+
+[[package]]
+category = "main"
+description = "Python API Wrapper for the Airtable API"
+name = "airtable-python-wrapper"
+optional = false
+python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*, !=3.4.*"
+version = "0.13.0"
+
+[package.dependencies]
+requests = ">=2"
+six = ">=1.10"
+
+[[package]]
+category = "main"
+description = "Reusable constraint types to use with typing.Annotated"
+name = "annotated-types"
+optional = false
+python-versions = ">=3.7"
+version = "0.5.0"
+
+[[package]]
+category = "main"
+description = "A small Python module for determining appropriate platform-specific dirs, e.g. a \"user data dir\"."
+name = "appdirs"
+optional = false
+python-versions = "*"
+version = "1.4.4"
+
+[[package]]
+category = "main"
+description = "A abstract syntax tree for Python with inference support."
+name = "astroid"
+optional = false
+python-versions = "*"
+version = "1.4.9"
+
+[package.dependencies]
+lazy-object-proxy = "*"
+six = "*"
+wrapt = "*"
+
+[[package]]
+category = "main"
+description = "Timeout context manager for asyncio programs"
+name = "async-timeout"
+optional = false
+python-versions = ">=3.6"
+version = "4.0.2"
+
+[[package]]
+category = "main"
+description = "Classes Without Boilerplate"
+name = "attrs"
+optional = false
+python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*"
+version = "19.3.0"
+
+[package.extras]
+azure-pipelines = ["coverage", "hypothesis", "pympler", "pytest (>=4.3.0)", "six", "zope.interface", "pytest-azurepipelines"]
+dev = ["coverage", "hypothesis", "pympler", "pytest (>=4.3.0)", "six", "zope.interface", "sphinx", "pre-commit"]
+docs = ["sphinx", "zope.interface"]
+tests = ["coverage", "hypothesis", "pympler", "pytest (>=4.3.0)", "six", "zope.interface"]
+
+[[package]]
+category = "main"
+description = "A thin, practical wrapper around terminal coloring, styling, and positioning"
+name = "blessings"
+optional = false
+python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*"
+version = "1.7"
+
+[package.dependencies]
+six = "*"
+
+[[package]]
+category = "main"
+description = "Fast, simple object-to-object and broadcast signaling"
+name = "blinker"
+optional = false
+python-versions = ">=3.7"
+version = "1.6.2"
+
+[[package]]
+category = "main"
+description = "Safe code refactoring for modern Python projects"
+name = "bowler"
+optional = false
+python-versions = ">=3.6"
+version = "0.8.0"
+
+[package.dependencies]
+attrs = "*"
+click = "*"
+fissix = "*"
+sh = "*"
+
+[[package]]
+category = "main"
+description = "Fancy Interface to the Python Interpreter"
+name = "bpython"
+optional = false
+python-versions = "*"
+version = "0.19"
+
+[package.dependencies]
+curtsies = ">=0.1.18"
+greenlet = "*"
+pygments = "*"
+requests = "*"
+six = ">=1.5"
+
+[package.extras]
+jedi = ["jedi"]
+urwid = ["urwid"]
+watch = ["watchdog"]
+
+[[package]]
+category = "main"
+description = "httplib2 caching for requests"
+name = "cachecontrol"
+optional = false
+python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*"
+version = "0.12.6"
+
+[package.dependencies]
+msgpack = ">=0.5.2"
+requests = "*"
+
+[package.extras]
+filecache = ["lockfile (>=0.9)"]
+redis = ["redis (>=2.10.5)"]
+
+[[package]]
+category = "main"
+description = "Cachy provides a simple yet effective caching library."
+name = "cachy"
+optional = false
+python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*"
+version = "0.3.0"
+
+[package.extras]
+memcached = ["python-memcached (>=1.59,<2.0)"]
+msgpack = ["msgpack-python (>=0.5,<0.6)"]
+redis = ["redis (>=3.3.6,<4.0.0)"]
+
+[[package]]
+category = "main"
+description = "Lightweight, extensible schema and data validation tool for Python dictionaries."
+name = "cerberus"
+optional = false
+python-versions = ">=2.7"
+version = "1.3.2"
+
+[package.dependencies]
+setuptools = "*"
+
+[[package]]
+category = "main"
+description = "Python package for providing Mozilla's CA Bundle."
+name = "certifi"
+optional = false
+python-versions = ">=3.6"
+version = "2023.7.22"
+
+[[package]]
+category = "main"
+description = "Foreign Function Interface for Python calling C code."
+name = "cffi"
+optional = false
+python-versions = "*"
+version = "1.15.1"
+
+[package.dependencies]
+pycparser = "*"
+
+[[package]]
+category = "main"
+description = "Universal encoding detector for Python 2 and 3"
+name = "chardet"
+optional = false
+python-versions = "*"
+version = "3.0.4"
+
+[[package]]
+category = "main"
+description = "The Real First Universal Charset Detector. Open, modern and actively maintained alternative to Chardet."
+name = "charset-normalizer"
+optional = false
+python-versions = ">=3.7.0"
+version = "3.2.0"
+
+[[package]]
+category = "main"
+description = "Cleo allows you to create beautiful and testable command-line interfaces."
+name = "cleo"
+optional = false
+python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*"
+version = "0.7.6"
+
+[package.dependencies]
+clikit = ">=0.4.0,<0.5.0"
+
+[[package]]
+category = "main"
+description = "Composable command line interface toolkit"
+name = "click"
+optional = false
+python-versions = ">=3.7"
+version = "8.1.7"
+
+[package.dependencies]
+colorama = "*"
+
+[[package]]
+category = "main"
+description = "CliKit is a group of utilities to build beautiful and testable command line interfaces."
+name = "clikit"
+optional = false
+python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*"
+version = "0.4.3"
+
+[package.dependencies]
+pastel = ">=0.2.0,<0.3.0"
+pylev = ">=1.3,<2.0"
+
+[[package]]
+category = "main"
+description = "Cross-platform colored terminal text."
+marker = "python_version >= \"3.6\" and platform_system == \"Windows\" or platform_system == \"Windows\" or sys_platform == \"win32\""
+name = "colorama"
+optional = false
+python-versions = "!=3.0.*,!=3.1.*,!=3.2.*,!=3.3.*,!=3.4.*,!=3.5.*,!=3.6.*,>=2.7"
+version = "0.4.6"
+
+[[package]]
+category = "main"
+description = "Python library for calculating contours of 2D quadrilateral grids"
+name = "contourpy"
+optional = false
+python-versions = ">=3.10"
+version = "1.3.2"
+
+[package.dependencies]
+numpy = ">=1.23"
+
+[package.extras]
+bokeh = ["bokeh", "selenium"]
+docs = ["furo", "sphinx (>=7.2)", "sphinx-copybutton"]
+mypy = ["contourpy", "bokeh", "docutils-stubs", "mypy (1.15.0)", "types-pillow"]
+test = ["contourpy", "matplotlib", "pillow"]
+test-no-images = ["pytest", "pytest-cov", "pytest-rerunfailures", "pytest-xdist", "wurlitzer"]
+
+[[package]]
+category = "main"
+description = "cryptography is a package which provides cryptographic recipes and primitives to Python developers."
+name = "cryptography"
+optional = false
+python-versions = ">=3.7"
+version = "41.0.3"
+
+[package.dependencies]
+cffi = ">=1.12"
+
+[package.extras]
+docs = ["sphinx (>=5.3.0)", "sphinx-rtd-theme (>=1.1.1)"]
+docstest = ["pyenchant (>=1.6.11)", "twine (>=1.12.0)", "sphinxcontrib-spelling (>=4.0.1)"]
+nox = ["nox"]
+pep8test = ["black", "ruff", "mypy", "check-sdist"]
+sdist = ["build"]
+ssh = ["bcrypt (>=3.1.5)"]
+test = ["pytest (>=6.2.0)", "pytest-benchmark", "pytest-cov", "pytest-xdist", "pretend"]
+test-randomorder = ["pytest-randomly"]
+
+[[package]]
+category = "main"
+description = "CS50 library for Python"
+name = "cs50"
+optional = false
+python-versions = "*"
+version = "5.0.4"
+
+[package.dependencies]
+Flask = ">=1.0"
+SQLAlchemy = "*"
+sqlparse = "*"
+termcolor = "*"
+
+[[package]]
+category = "main"
+description = "Curses-like terminal wrapper, with colored strings!"
+name = "curtsies"
+optional = false
+python-versions = "*"
+version = "0.3.1"
+
+[package.dependencies]
+blessings = ">=1.5"
+wcwidth = ">=0.1.4"
+
+[[package]]
+category = "main"
+description = "Composable style cycles"
+name = "cycler"
+optional = false
+python-versions = "*"
+version = "0.10.0"
+
+[package.dependencies]
+six = "*"
+
+[[package]]
 category = "dev"
+description = "An implementation of the Debug Adapter Protocol for Python"
+name = "debugpy"
+optional = false
+python-versions = ">=3.7"
+version = "1.6.7.post1"
+
+[[package]]
+category = "main"
+description = "Dependency resolution for Python"
+name = "dephell"
+optional = false
+python-versions = ">=3.5"
+version = "0.7.7"
+
+[package.dependencies]
+aiohttp = "*"
+appdirs = "*"
+attrs = "*"
+cerberus = ">=1.3"
+dephell-archive = ">=0.1.5"
+dephell-discover = ">=0.2.6"
+dephell-licenses = ">=0.1.6"
+dephell-links = ">=0.1.4"
+dephell-markers = ">=1.0.0"
+dephell-pythons = ">=0.1.11"
+dephell-shells = ">=0.1.3"
+dephell-specifier = ">=0.1.7"
+dephell-venvs = ">=0.1.16"
+dephell-versioning = "*"
+docker = "*"
+dockerpty = "*"
+html5lib = "*"
+jinja2 = "*"
+m2r = "*"
+packaging = "*"
+pip = ">=18.0"
+pyyaml = "*"
+requests = "*"
+setuptools = "*"
+tomlkit = "*"
+yaspin = "*"
+
+[package.dependencies.bowler]
+python = ">=3.6"
+version = "*"
+
+[package.dependencies.fissix]
+python = ">=3.6"
+version = "*"
+
+[package.extras]
+dev = ["aioresponses", "alabaster", "flake8-isort", "isort", "pygments-github-lexers", "pytest", "recommonmark", "requests-mock", "sphinx"]
+docs = ["alabaster", "pygments-github-lexers", "recommonmark", "sphinx"]
+full = ["aiofiles", "autopep8", "colorama", "graphviz", "yapf"]
+tests = ["aioresponses", "pytest", "requests-mock"]
+
+[[package]]
+category = "main"
+description = "pathlib for archives"
+name = "dephell-archive"
+optional = false
+python-versions = ">=3.6"
+version = "0.1.7"
+
+[package.dependencies]
+attrs = "*"
+
+[[package]]
+category = "main"
+description = "Find project modules and data files (packages and package_data for setup.py)."
+name = "dephell-discover"
+optional = false
+python-versions = ">=3.5"
+version = "0.2.10"
+
+[package.dependencies]
+attrs = "*"
+
+[[package]]
+category = "main"
+description = "Get info about OSS licenses"
+name = "dephell-licenses"
+optional = false
+python-versions = ">=3.5"
+version = "0.1.7"
+
+[package.dependencies]
+attrs = "*"
+requests = "*"
+
+[[package]]
+category = "main"
+description = "Parse dependency links"
+name = "dephell-links"
+optional = false
+python-versions = ">=3.5"
+version = "0.1.5"
+
+[package.dependencies]
+attrs = "*"
+
+[[package]]
+category = "main"
+description = "Work with environment markers (PEP-496)"
+name = "dephell-markers"
+optional = false
+python-versions = ">=3.5"
+version = "1.0.3"
+
+[package.dependencies]
+attrs = "*"
+dephell-specifier = "*"
+packaging = "*"
+
+[[package]]
+category = "main"
+description = "Work with python versions"
+name = "dephell-pythons"
+optional = false
+python-versions = ">=3.6"
+version = "0.1.15"
+
+[package.dependencies]
+attrs = "*"
+dephell-specifier = "*"
+packaging = "*"
+
+[[package]]
+category = "main"
+description = "activate virtual environment for current shell"
+name = "dephell-shells"
+optional = false
+python-versions = ">=3.6"
+version = "0.1.5"
+
+[package.dependencies]
+attrs = "*"
+pexpect = "*"
+shellingham = "*"
+
+[[package]]
+category = "main"
+description = "Work with version specifiers."
+name = "dephell-specifier"
+optional = false
+python-versions = ">=3.6"
+version = "0.2.2"
+
+[package.dependencies]
+packaging = ">=17.1"
+
+[[package]]
+category = "main"
+description = "Manage virtual environments"
+name = "dephell-venvs"
+optional = false
+python-versions = ">=3.5"
+version = "0.1.17"
+
+[package.dependencies]
+attrs = "*"
+dephell-pythons = "*"
+requests = "*"
+
+[[package]]
+category = "main"
+description = "Library for bumping project version like a pro"
+name = "dephell-versioning"
+optional = false
+python-versions = ">=3.6"
+version = "0.1.2"
+
+[package.dependencies]
+packaging = "*"
+
+[[package]]
+category = "main"
+description = "Distribution utilities"
+name = "distlib"
+optional = false
+python-versions = "*"
+version = "0.3.1"
+
+[[package]]
+category = "main"
+description = "A Python library for the Docker Engine API."
+name = "docker"
+optional = false
+python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*, !=3.4.*"
+version = "4.2.1"
+
+[package.dependencies]
+requests = ">=2.14.2,<2.18.0 || >2.18.0"
+six = ">=1.4.0"
+websocket-client = ">=0.32.0"
+
+[package.dependencies.pypiwin32]
+python = ">=3.6"
+version = "223"
+
+[package.extras]
+ssh = ["paramiko (>=2.4.2)"]
+tls = ["pyOpenSSL (>=17.5.0)", "cryptography (>=1.3.4)", "idna (>=2.0.0)"]
+
+[[package]]
+category = "main"
+description = "Python library to use the pseudo-tty of a docker container"
+name = "dockerpty"
+optional = false
+python-versions = "*"
+version = "0.4.1"
+
+[package.dependencies]
+six = ">=1.3.0"
+
+[[package]]
+category = "main"
+description = "Pythonic argument parser, that will make you smile"
+name = "docopt"
+optional = false
+python-versions = "*"
+version = "0.6.2"
+
+[[package]]
+category = "main"
+description = "Docutils -- Python Documentation Utilities"
+name = "docutils"
+optional = false
+python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*, !=3.4.*"
+version = "0.16"
+
+[[package]]
+category = "main"
+description = "A platform independent file lock."
+name = "filelock"
+optional = false
+python-versions = "*"
+version = "3.0.12"
+
+[[package]]
+category = "main"
+description = "Monkeypatches to override default behavior of lib2to3."
+name = "fissix"
+optional = false
+python-versions = ">=3.6"
+version = "20.5.1"
+
+[package.dependencies]
+appdirs = "*"
+
+[[package]]
+category = "main"
+description = "A simple framework for building complex web applications."
+name = "flask"
 optional = false
 python-versions = ">=3.8"
+version = "2.3.3"
 
 [package.dependencies]
-zipp = ">=0.5"
+Jinja2 = ">=3.1.2"
+Werkzeug = ">=2.3.7"
+blinker = ">=1.6.2"
+click = ">=8.1.3"
+itsdangerous = ">=2.1.2"
 
 [package.extras]
-docs = ["sphinx (>=3.5)", "jaraco.packaging (>=9)", "rst.linker (>=1.9)", "furo", "sphinx-lint", "jaraco.tidelift (>=1.4)"]
-perf = ["ipython"]
-testing = ["pytest (>=6)", "pytest-checkdocs (>=2.4)", "pytest-cov", "pytest-enabler (>=2.2)", "pytest-ruff", "packaging", "pyfakefs", "flufl.flake8", "pytest-perf (>=0.9.2)", "pytest-black (>=0.3.7)", "pytest-mypy (>=0.9.1)", "importlib-resources (>=1.3)"]
+async = ["asgiref (>=3.2)"]
+dotenv = ["python-dotenv"]
 
 [[package]]
-name = "jedi"
+category = "main"
+description = "Tools to manipulate font files"
+name = "fonttools"
+optional = false
+python-versions = ">=3.8"
+version = "4.57.0"
+
+[package.extras]
+all = ["fs (>=2.2.0,<3)", "lxml (>=4.0)", "brotli (>=1.0.1)", "brotlicffi (>=0.8.0)", "zopfli (>=0.1.4)", "unicodedata2 (>=15.1.0)", "lz4 (>=1.7.4.2)", "scipy", "munkres", "pycairo", "matplotlib", "sympy", "xattr", "skia-pathops (>=0.5.0)", "uharfbuzz (>=0.23.0)"]
+graphite = ["lz4 (>=1.7.4.2)"]
+interpolatable = ["scipy", "munkres", "pycairo"]
+lxml = ["lxml (>=4.0)"]
+pathops = ["skia-pathops (>=0.5.0)"]
+plot = ["matplotlib"]
+repacker = ["uharfbuzz (>=0.23.0)"]
+symfont = ["sympy"]
+type1 = ["xattr"]
+ufo = ["fs (>=2.2.0,<3)"]
+unicode = ["unicodedata2 (>=15.1.0)"]
+woff = ["brotli (>=1.0.1)", "brotlicffi (>=0.8.0)", "zopfli (>=0.1.4)"]
+
+[[package]]
+category = "main"
+description = "A list-like structure which implements collections.abc.MutableSequence"
+name = "frozenlist"
+optional = false
+python-versions = ">=3.9"
+version = "1.6.0"
+
+[[package]]
+category = "main"
+description = "Clean single-source support for Python 3 and 2"
+name = "future"
+optional = false
+python-versions = ">=2.6, !=3.0.*, !=3.1.*, !=3.2.*"
 version = "0.18.2"
-description = "An autocompletion tool for Python that can be used for text editors."
-category = "dev"
+
+[[package]]
+category = "main"
+description = "A ctypes-based wrapper for GLFW3."
+name = "glfw"
 optional = false
-python-versions = ">=3.6"
+python-versions = "*"
+version = "1.11.2"
+
+[[package]]
+category = "main"
+description = "Lightweight in-process concurrent programming"
+name = "greenlet"
+optional = false
+python-versions = ">=2.7,!=3.0.*,!=3.1.*,!=3.2.*,!=3.3.*,!=3.4.*"
+version = "2.0.2"
+
+[package.extras]
+docs = ["sphinx", "docutils (<0.18)"]
+test = ["objgraph", "psutil"]
+
+[[package]]
+category = "main"
+description = "WSGI HTTP Server for UNIX"
+name = "gunicorn"
+optional = false
+python-versions = ">=3.4"
+version = "20.0.4"
 
 [package.dependencies]
-parso = ">=0.8.0,<0.9.0"
+setuptools = ">=3.0"
 
 [package.extras]
-docs = ["Jinja2 (==2.11.3)", "MarkupSafe (==1.1.1)", "Pygments (==2.8.1)", "alabaster (==0.7.12)", "babel (==2.9.1)", "chardet (==4.0.0)", "commonmark (==0.8.1)", "docutils (==0.17.1)", "future (==0.18.2)", "idna (==2.10)", "imagesize (==1.2.0)", "mock (==1.0.1)", "packaging (==20.9)", "pyparsing (==2.4.7)", "pytz (==2021.1)", "readthedocs-sphinx-ext (==2.1.4)", "recommonmark (==0.5.0)", "requests (==2.25.1)", "six (==1.15.0)", "snowballstemmer (==2.1.0)", "sphinx-rtd-theme (==0.4.3)", "sphinx (==1.8.5)", "sphinxcontrib-serializinghtml (==1.1.4)", "sphinxcontrib-websupport (==1.2.4)", "urllib3 (==1.26.4)"]
-qa = ["flake8 (==3.8.3)", "mypy (==0.782)"]
-testing = ["Django (<3.1)", "attrs", "colorama", "docopt", "pytest (<7.0.0)"]
+eventlet = ["eventlet (>=0.9.7)"]
+gevent = ["gevent (>=0.13)"]
+setproctitle = ["setproctitle"]
+tornado = ["tornado (>=0.2)"]
 
 [[package]]
-name = "packaging"
-version = "23.1"
-description = "Core utilities for Python packages"
-category = "dev"
+category = "main"
+description = "HTML parser based on the WHATWG HTML specification"
+name = "html5lib"
+optional = false
+python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*, !=3.4.*"
+version = "1.1"
+
+[package.dependencies]
+six = ">=1.9"
+webencodings = "*"
+
+[package.extras]
+all = ["genshi", "chardet (>=2.2)", "lxml"]
+chardet = ["chardet (>=2.2)"]
+genshi = ["genshi"]
+lxml = ["lxml"]
+
+[[package]]
+category = "main"
+description = "Internationalized Domain Names in Applications (IDNA)"
+name = "idna"
+optional = false
+python-versions = ">=3.5"
+version = "3.4"
+
+[[package]]
+category = "main"
+description = "A port of Ruby on Rails inflector to Python"
+name = "inflection"
+optional = false
+python-versions = ">=3.5"
+version = "0.5.1"
+
+[[package]]
+category = "main"
+description = "A Python utility / library to sort Python imports."
+name = "isort"
+optional = false
+python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*"
+version = "4.3.21"
+
+[package.extras]
+pipfile = ["pipreqs", "requirementslib"]
+pyproject = ["toml"]
+requirements = ["pipreqs", "pip-api"]
+xdg_home = ["appdirs (>=1.4.0)"]
+
+[[package]]
+category = "main"
+description = "Safely pass data to untrusted environments and back."
+name = "itsdangerous"
 optional = false
 python-versions = ">=3.7"
+version = "2.1.2"
 
 [[package]]
-name = "parso"
-version = "0.8.3"
-description = "A Python Parser"
-category = "dev"
+category = "main"
+description = "An autocompletion tool for Python that can be used for text editors."
+name = "jedi"
+optional = false
+python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*"
+version = "0.13.2"
+
+[package.dependencies]
+parso = ">=0.3.0"
+
+[package.extras]
+testing = ["colorama", "docopt", "pytest (>=3.1.0)"]
+
+[[package]]
+category = "main"
+description = "Low-level, pure Python DBus protocol wrapper."
+name = "jeepney"
+optional = false
+python-versions = ">=3.5"
+version = "0.4.3"
+
+[package.extras]
+dev = ["testpath"]
+
+[[package]]
+category = "main"
+description = "A very fast and expressive template engine."
+name = "jinja2"
+optional = false
+python-versions = ">=3.7"
+version = "3.1.2"
+
+[package.dependencies]
+MarkupSafe = ">=2.0"
+
+[package.extras]
+i18n = ["Babel (>=2.7)"]
+
+[[package]]
+category = "main"
+description = "Lightweight pipelining: using Python functions as pipeline jobs."
+name = "joblib"
 optional = false
 python-versions = ">=3.6"
-
-[package.extras]
-qa = ["flake8 (==3.8.3)", "mypy (==0.782)"]
-testing = ["docopt", "pytest (<6.0.0)"]
+version = "0.15.1"
 
 [[package]]
-name = "platformdirs"
-version = "3.10.0"
-description = "A small Python package for determining appropriate platform-specific dirs, e.g. a \"user data dir\"."
-category = "dev"
+category = "main"
+description = "An implementation of JSON Schema validation for Python"
+name = "jsonschema"
+optional = false
+python-versions = "*"
+version = "3.2.0"
+
+[package.dependencies]
+attrs = ">=17.4.0"
+pyrsistent = ">=0.14.0"
+setuptools = "*"
+six = ">=1.11.0"
+
+[package.extras]
+format = ["idna", "jsonpointer (>1.13)", "rfc3987", "strict-rfc3339", "webcolors"]
+format_nongpl = ["idna", "jsonpointer (>1.13)", "webcolors", "rfc3986-validator (>0.1.0)", "rfc3339-validator"]
+
+[[package]]
+category = "main"
+description = "Store and access your passwords safely."
+name = "keyring"
+optional = false
+python-versions = ">=3.5"
+version = "20.0.1"
+
+[package.dependencies]
+pywin32-ctypes = "<0.1.0 || >0.1.0,<0.1.1 || >0.1.1"
+secretstorage = "*"
+
+[package.extras]
+docs = ["sphinx", "jaraco.packaging (>=3.2)", "rst.linker (>=1.9)"]
+testing = ["pytest (>=3.5,<3.7.3 || >3.7.3)", "pytest-checkdocs (>=1.2.3)", "pytest-flake8", "pytest-black-multipy", "pytest-cov"]
+
+[[package]]
+category = "main"
+description = "A fast implementation of the Cassowary constraint solver"
+name = "kiwisolver"
 optional = false
 python-versions = ">=3.7"
+version = "1.4.4"
+
+[[package]]
+category = "main"
+description = "A fast and thorough lazy object proxy."
+name = "lazy-object-proxy"
+optional = false
+python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*"
+version = "1.5.0"
+
+[[package]]
+category = "main"
+description = "Platform-independent file locking module"
+name = "lockfile"
+optional = false
+python-versions = "*"
+version = "0.12.2"
+
+[[package]]
+category = "main"
+description = "Markdown and reStructuredText in a single file."
+name = "m2r"
+optional = false
+python-versions = "*"
+version = "0.2.1"
+
+[package.dependencies]
+docutils = "*"
+mistune = "*"
+
+[[package]]
+category = "main"
+description = "Safely add untrusted strings to HTML/XML markup."
+name = "markupsafe"
+optional = false
+python-versions = ">=3.7"
+version = "2.1.3"
+
+[[package]]
+category = "main"
+description = "Python plotting package"
+name = "matplotlib"
+optional = false
+python-versions = ">=3.8"
+version = "3.7.2"
+
+[package.dependencies]
+contourpy = ">=1.0.1"
+cycler = ">=0.10"
+fonttools = ">=4.22.0"
+kiwisolver = ">=1.0.1"
+numpy = ">=1.20"
+packaging = ">=20.0"
+pillow = ">=6.2.0"
+pyparsing = ">=2.3.1,<3.1"
+python-dateutil = ">=2.7"
+setuptools_scm = ">=7"
+
+[[package]]
+category = "main"
+description = "McCabe checker, plugin for flake8"
+name = "mccabe"
+optional = false
+python-versions = "*"
+version = "0.6.1"
+
+[[package]]
+category = "main"
+description = "The fastest markdown parser in pure Python"
+name = "mistune"
+optional = false
+python-versions = "*"
+version = "0.8.4"
+
+[[package]]
+category = "main"
+description = "MessagePack (de)serializer."
+name = "msgpack"
+optional = false
+python-versions = "*"
+version = "1.0.0"
+
+[[package]]
+category = "main"
+description = "multidict implementation"
+name = "multidict"
+optional = false
+python-versions = ">=3.7"
+version = "6.0.4"
+
+[[package]]
+category = "main"
+description = "Natural Language Toolkit"
+name = "nltk"
+optional = false
+python-versions = "*"
+version = "3.5"
+
+[package.dependencies]
+click = "*"
+joblib = "*"
+regex = "*"
+tqdm = "*"
+
+[package.extras]
+all = ["requests", "numpy", "python-crfsuite", "scikit-learn", "twython", "pyparsing", "scipy", "matplotlib", "gensim"]
+corenlp = ["requests"]
+machine_learning = ["gensim", "numpy", "python-crfsuite", "scikit-learn", "scipy"]
+plot = ["matplotlib"]
+tgrep = ["pyparsing"]
+twitter = ["twython"]
+
+[[package]]
+category = "main"
+description = "Fundamental package for array computing in Python"
+name = "numpy"
+optional = false
+python-versions = ">=3.9"
+version = "1.25.2"
+
+[[package]]
+category = "main"
+description = "Core utilities for Python packages"
+name = "packaging"
+optional = false
+python-versions = ">=3.8"
+version = "25.0"
+
+[[package]]
+category = "main"
+description = "A Python Parser"
+name = "parso"
+optional = false
+python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*"
+version = "0.7.0"
+
+[package.extras]
+testing = ["docopt", "pytest (>=3.0.7)"]
+
+[[package]]
+category = "main"
+description = "Bring colors to your terminal."
+name = "pastel"
+optional = false
+python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*"
+version = "0.2.0"
+
+[[package]]
+category = "main"
+description = "Pexpect allows easy control of interactive console applications."
+name = "pexpect"
+optional = false
+python-versions = "*"
+version = "4.8.0"
+
+[package.dependencies]
+ptyprocess = ">=0.5"
+
+[[package]]
+category = "main"
+description = "Python Imaging Library (Fork)"
+name = "pillow"
+optional = false
+python-versions = ">=3.8"
+version = "10.0.0"
+
+[package.extras]
+docs = ["furo", "olefile", "sphinx (>=2.4)", "sphinx-copybutton", "sphinx-inline-tabs", "sphinx-removed-in", "sphinxext-opengraph"]
+tests = ["check-manifest", "coverage", "defusedxml", "markdown2", "olefile", "packaging", "pyroma", "pytest", "pytest-cov", "pytest-timeout"]
+
+[[package]]
+category = "main"
+description = "Pip requirements.txt generator based on imports in project"
+name = "pipreqs-amasad"
+optional = false
+python-versions = "*"
+version = "0.4.10"
+
+[package.dependencies]
+docopt = "*"
+yarg = "*"
+
+[[package]]
+category = "main"
+description = "Query metadatdata from sdists / bdists / installed packages."
+name = "pkginfo"
+optional = false
+python-versions = "*"
+version = "1.5.0.1"
+
+[package.extras]
+testing = ["nose", "coverage"]
+
+[[package]]
+category = "main"
+description = "A small Python package for determining appropriate platform-specific dirs, e.g. a \"user data dir\"."
+name = "platformdirs"
+optional = false
+python-versions = ">=3.7"
+version = "3.10.0"
 
 [package.extras]
 docs = ["furo (>=2023.7.26)", "proselint (>=0.13)", "sphinx-autodoc-typehints (>=1.24)", "sphinx (>=7.1.1)"]
-test = ["appdirs (==1.4.4)", "covdefaults (>=2.3)", "pytest-cov (>=4.1)", "pytest-mock (>=3.11.1)", "pytest (>=7.4)"]
+test = ["appdirs (1.4.4)", "covdefaults (>=2.3)", "pytest-cov (>=4.1)", "pytest-mock (>=3.11.1)", "pytest (>=7.4)"]
 
 [[package]]
-name = "pluggy"
-version = "1.2.0"
+category = "main"
 description = "plugin and hook calling mechanisms for python"
-category = "dev"
+name = "pluggy"
 optional = false
-python-versions = ">=3.7"
+python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*"
+version = "0.13.1"
 
 [package.extras]
 dev = ["pre-commit", "tox"]
-testing = ["pytest", "pytest-benchmark"]
 
 [[package]]
-name = "pyflakes"
-version = "2.5.0"
-description = "passive checker of Python programs"
-category = "dev"
-optional = false
-python-versions = ">=3.6"
-
-[[package]]
-name = "python-lsp-jsonrpc"
-version = "1.0.0"
-description = "JSON RPC 2.0 server library"
-category = "dev"
+category = "main"
+description = "Python Lex & Yacc"
+name = "ply"
 optional = false
 python-versions = "*"
+version = "3.11"
+
+[[package]]
+category = "main"
+description = "Python dependency management and packaging made easy."
+name = "poetry"
+optional = false
+python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*"
+version = "1.0.5"
+
+[package.dependencies]
+cachy = ">=0.3.0,<0.4.0"
+cleo = ">=0.7.6,<0.8.0"
+clikit = ">=0.4.2,<0.5.0"
+html5lib = ">=1.0,<2.0"
+jsonschema = ">=3.1,<4.0"
+pexpect = ">=4.7.0,<5.0.0"
+pkginfo = ">=1.4,<2.0"
+pyparsing = ">=2.2,<3.0"
+pyrsistent = ">=0.14.2,<0.15.0"
+requests = ">=2.18,<3.0"
+requests-toolbelt = ">=0.8.0,<0.9.0"
+shellingham = ">=1.1,<2.0"
+tomlkit = ">=0.5.11,<0.6.0"
+
+[package.dependencies.cachecontrol]
+extras = ["filecache"]
+version = ">=0.12.4,<0.13.0"
+
+[package.dependencies.keyring]
+python = ">=3.5,<4.0"
+version = ">=20.0.1,<21.0.0"
+
+[[package]]
+category = "main"
+description = "Library for building powerful interactive command lines in Python"
+name = "prompt-toolkit"
+optional = false
+python-versions = ">=3.6.1"
+version = "3.0.5"
+
+[package.dependencies]
+wcwidth = "*"
+
+[[package]]
+category = "main"
+description = "Python REPL build on top of prompt_toolkit"
+name = "ptpython"
+optional = false
+python-versions = ">=3.6"
+version = "3.0.2"
+
+[package.dependencies]
+appdirs = "*"
+jedi = ">=0.9.0"
+prompt-toolkit = ">=3.0.0,<3.1.0"
+pygments = "*"
+
+[package.extras]
+ptipython = ["ipython"]
+
+[[package]]
+category = "main"
+description = "Run a subprocess in a pseudo terminal"
+name = "ptyprocess"
+optional = false
+python-versions = "*"
+version = "0.6.0"
+
+[[package]]
+category = "main"
+description = "Python Client for the Airtable API"
+name = "pyairtable"
+optional = false
+python-versions = "*"
+version = "2.1.0.post1"
+
+[package.dependencies]
+inflection = "*"
+pydantic = "*"
+requests = ">=2.22.0"
+typing-extensions = "*"
+urllib3 = ">=1.26"
+
+[[package]]
+category = "main"
+description = "Python style guide checker"
+name = "pycodestyle"
+optional = false
+python-versions = "*"
+version = "2.4.0"
+
+[[package]]
+category = "main"
+description = "C parser in Python"
+name = "pycparser"
+optional = false
+python-versions = "*"
+version = "2.02"
+
+[package.dependencies]
+ply = "*"
+
+[[package]]
+category = "main"
+description = "Data validation using Python type hints"
+name = "pydantic"
+optional = false
+python-versions = ">=3.7"
+version = "2.3.0"
+
+[package.dependencies]
+annotated-types = ">=0.4.0"
+pydantic-core = "2.6.3"
+typing-extensions = ">=4.6.1"
+
+[package.extras]
+email = ["email-validator (>=2.0.0)"]
+
+[[package]]
+category = "main"
+description = ""
+name = "pydantic-core"
+optional = false
+python-versions = ">=3.7"
+version = "2.6.3"
+
+[package.dependencies]
+typing-extensions = ">=4.6.0,<4.7.0 || >4.7.0"
+
+[[package]]
+category = "main"
+description = "passive checker of Python programs"
+name = "pyflakes"
+optional = false
+python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*"
+version = "2.1.1"
+
+[[package]]
+category = "main"
+description = "Python Game Development"
+name = "pygame"
+optional = false
+python-versions = ">=3.6"
+version = "2.5.0"
+
+[[package]]
+category = "main"
+description = "Pygments is a syntax highlighting package written in Python."
+name = "pygments"
+optional = false
+python-versions = ">=3.5"
+version = "2.6.1"
+
+[[package]]
+category = "main"
+description = "A pure Python Levenshtein implementation that's not freaking GPL'd."
+name = "pylev"
+optional = false
+python-versions = "*"
+version = "1.3.0"
+
+[[package]]
+category = "main"
+description = "python code static checker"
+name = "pylint"
+optional = false
+python-versions = "*"
+version = "1.6.4"
+
+[package.dependencies]
+astroid = ">=1.4.5,<1.5.0"
+colorama = "*"
+isort = ">=4.2.5"
+mccabe = "*"
+six = "*"
+
+[[package]]
+category = "main"
+description = "Standard OpenGL bindings for Python"
+name = "pyopengl"
+optional = false
+python-versions = "*"
+version = "3.1.5"
+
+[[package]]
+category = "main"
+description = "Python parsing module"
+name = "pyparsing"
+optional = false
+python-versions = ">=2.6, !=3.0.*, !=3.1.*, !=3.2.*"
+version = "2.4.7"
+
+[[package]]
+category = "main"
+description = ""
+marker = "sys_platform == \"win32\" and python_version >= \"3.6\""
+name = "pypiwin32"
+optional = false
+python-versions = "*"
+version = "223"
+
+[package.dependencies]
+pywin32 = ">=223"
+
+[[package]]
+category = "main"
+description = "Persistent/Functional/Immutable data structures"
+name = "pyrsistent"
+optional = false
+python-versions = "*"
+version = "0.14.11"
+
+[package.dependencies]
+six = "*"
+
+[[package]]
+category = "main"
+description = "Extensions to the standard Python datetime module"
+name = "python-dateutil"
+optional = false
+python-versions = "!=3.0.*,!=3.1.*,!=3.2.*,>=2.7"
+version = "2.8.1"
+
+[package.dependencies]
+six = ">=1.5"
+
+[[package]]
+category = "main"
+description = "Read key-value pairs from a .env file and set them as environment variables"
+name = "python-dotenv"
+optional = false
+python-versions = ">=3.8"
+version = "1.0.0"
+
+[package.extras]
+cli = ["click (>=5.0)"]
+
+[[package]]
+category = "main"
+description = "JSON RPC 2.0 server library"
+name = "python-jsonrpc-server"
+optional = false
+python-versions = "*"
+version = "0.4.0"
 
 [package.dependencies]
 ujson = ">=3.0.0"
 
 [package.extras]
-test = ["pylint", "pycodestyle", "pyflakes", "pytest", "pytest-cov", "coverage"]
+test = ["versioneer", "pylint", "pycodestyle", "pyflakes", "pytest", "mock", "pytest-cov", "coverage"]
 
 [[package]]
-name = "pytoolconfig"
-version = "1.2.5"
+category = "main"
+description = "Python Language Server for the Language Server Protocol"
+name = "python-language-server"
+optional = false
+python-versions = "*"
+version = "0.21.5"
+
+[package.dependencies]
+future = ">=0.14.0"
+jedi = ">=0.12"
+pluggy = "*"
+python-jsonrpc-server = ">=0.1.0"
+
+[package.extras]
+all = ["autopep8", "mccabe", "pycodestyle", "pydocstyle (>=2.0.0)", "pyflakes (>=1.6.0)", "rope (>=0.10.5)", "yapf"]
+autopep8 = ["autopep8"]
+mccabe = ["mccabe"]
+pycodestyle = ["pycodestyle"]
+pydocstyle = ["pydocstyle (>=2.0.0)"]
+pyflakes = ["pyflakes (>=1.6.0)"]
+rope = ["rope (>0.10.5)"]
+test = ["tox", "versioneer", "pytest", "mock", "pytest-cov", "coverage"]
+yapf = ["yapf"]
+
+[[package]]
+category = "main"
 description = "Python tool configuration"
-category = "dev"
+name = "pytoolconfig"
 optional = false
 python-versions = ">=3.7"
+version = "1.2.5"
 
 [package.dependencies]
 packaging = ">=22.0"
-platformdirs = {version = ">=1.4.4", optional = true, markers = "extra == \"global\""}
-tomli = {version = ">=2.0.1", markers = "python_version < \"3.11\""}
+
+[package.dependencies.platformdirs]
+optional = true
+version = ">=1.4.4"
+
+[package.dependencies.tomli]
+python = "<3.11"
+version = ">=2.0.1"
 
 [package.extras]
 doc = ["tabulate (>=0.8.9)", "sphinx (>=4.5.0)"]
@@ -124,48 +1364,91 @@ global = ["platformdirs (>=1.4.4)"]
 validation = ["pydantic (>=1.7.4)"]
 
 [[package]]
-name = "replit-python-lsp-server"
-version = "1.15.9"
-description = "Python Language Server for the Language Server Protocol"
-category = "dev"
+category = "main"
+description = "Python for Window Extensions"
+marker = "sys_platform == \"win32\" and python_version >= \"3.6\""
+name = "pywin32"
 optional = false
-python-versions = ">=3.7"
-
-[package.dependencies]
-jedi = ">=0.17.2,<0.19.0"
-pluggy = ">=1.0.0"
-pyflakes = {version = ">=2.5.0,<2.6.0", optional = true, markers = "extra == \"pyflakes\""}
-python-lsp-jsonrpc = ">=1.0.0"
-rope = {version = ">0.10.5", optional = true, markers = "extra == \"rope\""}
-toml = ">=0.10.2"
-ujson = ">=3.0.0"
-whatthepatch = {version = ">=1.0.2,<2.0.0", optional = true, markers = "extra == \"yapf\""}
-yapf = {version = "*", optional = true, markers = "extra == \"yapf\""}
-
-[package.extras]
-all = ["autopep8 (>=1.6.0,<1.7.0)", "flake8 (>=5.0.0,<5.1.0)", "mccabe (>=0.7.0,<0.8.0)", "pycodestyle (>=2.9.0,<2.10.0)", "pydocstyle (>=2.0.0)", "pyflakes (>=2.5.0,<2.6.0)", "pylint (>=2.5.0)", "rope (>=0.10.5)", "yapf", "whatthepatch"]
-autopep8 = ["autopep8 (>=1.6.0,<1.7.0)"]
-flake8 = ["flake8 (>=5.0.0,<5.1.0)"]
-mccabe = ["mccabe (>=0.7.0,<0.8.0)"]
-pycodestyle = ["pycodestyle (>=2.9.0,<2.10.0)"]
-pydocstyle = ["pydocstyle (>=2.0.0)"]
-pyflakes = ["pyflakes (>=2.5.0,<2.6.0)"]
-pylint = ["pylint (>=2.5.0)"]
-rope = ["rope (>0.10.5)"]
-test = ["pylint (>=2.5.0)", "pytest", "pytest-cov", "coverage", "numpy (<1.23)", "pandas", "matplotlib", "pyqt5", "flaky"]
-websockets = ["websockets (>=10.3)"]
-yapf = ["yapf", "whatthepatch (>=1.0.2,<2.0.0)"]
+python-versions = "*"
+version = "310"
 
 [[package]]
-name = "rope"
-version = "1.9.0"
-description = "a python refactoring library..."
-category = "dev"
+category = "main"
+description = "A (partial) reimplementation of pywin32 using ctypes/cffi"
+marker = "python_version >= \"3.5\" and python_version < \"4.0\" and sys_platform == \"win32\" or sys_platform == \"win32\""
+name = "pywin32-ctypes"
 optional = false
-python-versions = ">=3.7"
+python-versions = ">=3.6"
+version = "0.2.3"
+
+[[package]]
+category = "main"
+description = "YAML parser and emitter for Python"
+name = "pyyaml"
+optional = false
+python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*, !=3.4.*"
+version = "5.3.1"
+
+[[package]]
+category = "main"
+description = "Alternative regular expression module, to replace re."
+name = "regex"
+optional = false
+python-versions = ">=3.6"
+version = "2023.8.8"
+
+[[package]]
+category = "main"
+description = "A package for repl.it that allows you to clear the console and play audio."
+name = "replit"
+optional = false
+python-versions = "*"
+version = "1.2.2"
 
 [package.dependencies]
-pytoolconfig = {version = ">=1.2.2", extras = ["global"]}
+typing-extensions = "*"
+
+[[package]]
+category = "main"
+description = "Python HTTP for Humans."
+name = "requests"
+optional = false
+python-versions = ">=3.7"
+version = "2.31.0"
+
+[package.dependencies]
+certifi = ">=2017.4.17"
+charset-normalizer = ">=2,<4"
+idna = ">=2.5,<4"
+urllib3 = ">=1.21.1,<3"
+
+[package.extras]
+socks = ["PySocks (>=1.5.6,<1.5.7 || >1.5.7)"]
+use_chardet_on_py3 = ["chardet (>=3.0.2,<6)"]
+
+[[package]]
+category = "main"
+description = "A utility belt for advanced users of python-requests"
+name = "requests-toolbelt"
+optional = false
+python-versions = "*"
+version = "0.8.0"
+
+[package.dependencies]
+requests = ">=2.0.1,<3.0.0"
+
+[[package]]
+category = "main"
+description = "a python refactoring library..."
+name = "rope"
+optional = false
+python-versions = ">=3.7"
+version = "1.9.0"
+
+[package.dependencies]
+[package.dependencies.pytoolconfig]
+extras = ["global"]
+version = ">=1.2.2"
 
 [package.extras]
 dev = ["pytest (>=7.0.1)", "pytest-timeout (>=2.1.0)", "build (>=0.7.0)", "pre-commit (>=2.20.0)"]
@@ -173,97 +1456,439 @@ doc = ["pytoolconfig", "sphinx (>=4.5.0)", "sphinx-autodoc-typehints (>=1.18.1)"
 release = ["toml (>=0.10.2)", "twine (>=4.0.2)", "pip-tools (>=6.12.1)"]
 
 [[package]]
-name = "toml"
-version = "0.10.2"
-description = "Python Library for Tom's Obvious, Minimal Language"
-category = "dev"
+category = "main"
+description = "Fundamental algorithms for scientific computing in Python"
+name = "scipy"
 optional = false
-python-versions = ">=2.6, !=3.0.*, !=3.1.*, !=3.2.*"
-
-[[package]]
-name = "tomli"
-version = "2.0.1"
-description = "A lil' TOML parser"
-category = "dev"
-optional = false
-python-versions = ">=3.7"
-
-[[package]]
-name = "ujson"
-version = "5.8.0"
-description = "Ultra fast JSON encoder and decoder for Python"
-category = "dev"
-optional = false
-python-versions = ">=3.8"
-
-[[package]]
-name = "urllib3"
-version = "2.0.4"
-description = "HTTP library with thread-safe connection pooling, file post, and more."
-category = "dev"
-optional = false
-python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*, !=3.4.*, !=3.5.*"
-
-[package.extras]
-brotli = ["brotlicffi (>=0.8.0)", "brotli (>=1.0.9)", "brotlipy (>=0.6.0)"]
-secure = ["pyOpenSSL (>=0.14)", "cryptography (>=1.3.4)", "idna (>=2.0.0)", "certifi", "urllib3-secure-extra", "ipaddress"]
-socks = ["PySocks (>=1.5.6,!=1.5.7,<2.0)"]
-
-[[package]]
-name = "whatthepatch"
-version = "1.0.5"
-description = "A patch parsing and application library."
-category = "dev"
-optional = false
-python-versions = ">=3.7"
-
-[[package]]
-name = "yapf"
-version = "0.40.1"
-description = "A formatter for Python code."
-category = "dev"
-optional = false
-python-versions = ">=3.7"
+python-versions = ">=3.10"
+version = "1.15.2"
 
 [package.dependencies]
-importlib-metadata = ">=6.6.0"
-platformdirs = ">=3.5.1"
-tomli = ">=2.0.1"
-
-[[package]]
-name = "zipp"
-version = "3.16.2"
-description = "Backport of pathlib-compatible object wrapper for zip files"
-category = "dev"
-optional = false
-python-versions = ">=3.8"
+numpy = ">=1.23.5,<2.5"
 
 [package.extras]
-docs = ["sphinx (>=3.5)", "jaraco.packaging (>=9.3)", "rst.linker (>=1.9)", "furo", "sphinx-lint", "jaraco.tidelift (>=1.4)"]
-testing = ["pytest (>=6)", "pytest-checkdocs (>=2.4)", "pytest-cov", "pytest-enabler (>=2.2)", "pytest-ruff", "jaraco.itertools", "jaraco.functools", "more-itertools", "big-o", "pytest-ignore-flaky", "pytest-black (>=0.3.7)", "pytest-mypy (>=0.9.1)"]
+dev = ["mypy (1.10.0)", "typing-extensions", "types-psutil", "pycodestyle", "ruff (>=0.0.292)", "cython-lint (>=0.12.2)", "rich-click", "doit (>=0.36.0)", "pydevtool"]
+doc = ["sphinx (>=5.0.0,<8.0.0)", "intersphinx-registry", "pydata-sphinx-theme (>=0.15.2)", "sphinx-copybutton", "sphinx-design (>=0.4.0)", "matplotlib (>=3.5)", "numpydoc", "jupytext", "myst-nb", "pooch", "jupyterlite-sphinx (>=0.16.5)", "jupyterlite-pyodide-kernel"]
+test = ["pytest", "pytest-cov", "pytest-timeout", "pytest-xdist", "asv", "mpmath", "gmpy2", "threadpoolctl", "scikit-umfpack", "pooch", "hypothesis (>=6.30)", "array-api-strict (>=2.0,<2.1.1)", "cython", "meson", "ninja"]
+
+[[package]]
+category = "main"
+description = "Python bindings to FreeDesktop.org Secret Service API"
+name = "secretstorage"
+optional = false
+python-versions = ">=3.5"
+version = "3.1.2"
+
+[package.dependencies]
+cryptography = "*"
+jeepney = ">=0.4.2"
+
+[[package]]
+category = "main"
+description = "the blessed package to manage your versions by scm tags"
+name = "setuptools-scm"
+optional = false
+python-versions = ">=3.8"
+version = "8.3.1"
+
+[package.dependencies]
+packaging = ">=20"
+setuptools = "*"
+
+[package.dependencies.tomli]
+python = "<3.11"
+version = ">=1"
+
+[package.extras]
+docs = ["entangled-cli (>=2.0,<3.0)", "mkdocs", "mkdocs-entangled-plugin", "mkdocs-include-markdown-plugin", "mkdocs-material", "mkdocstrings", "pygments"]
+rich = ["rich"]
+test = ["build", "pytest", "rich", "typing-extensions", "wheel"]
+
+[[package]]
+category = "main"
+description = "Python subprocess replacement"
+name = "sh"
+optional = false
+python-versions = "*"
+version = "1.13.1"
+
+[[package]]
+category = "main"
+description = "Tool to Detect Surrounding Shell"
+name = "shellingham"
+optional = false
+python-versions = "!=3.0,!=3.1,!=3.2,!=3.3,>=2.6"
+version = "1.3.2"
+
+[[package]]
+category = "main"
+description = "Python 2 and 3 compatibility utilities"
+name = "six"
+optional = false
+python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*"
+version = "1.15.0"
+
+[[package]]
+category = "main"
+description = "Play and Record Sound with Python"
+name = "sounddevice"
+optional = false
+python-versions = ">=2.6"
+version = "0.3.15"
+
+[package.dependencies]
+CFFI = ">=1.0"
+
+[package.extras]
+numpy = ["numpy"]
+
+[[package]]
+category = "main"
+description = "Database Abstraction Library"
+name = "sqlalchemy"
+optional = false
+python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*"
+version = "1.3.17"
+
+[package.extras]
+mssql = ["pyodbc"]
+mssql_pymssql = ["pymssql"]
+mssql_pyodbc = ["pyodbc"]
+mysql = ["mysqlclient"]
+oracle = ["cx-oracle"]
+postgresql = ["psycopg2"]
+postgresql_pg8000 = ["pg8000"]
+postgresql_psycopg2binary = ["psycopg2-binary"]
+postgresql_psycopg2cffi = ["psycopg2cffi"]
+pymysql = ["pymysql"]
+
+[[package]]
+category = "main"
+description = "Non-validating SQL parser"
+name = "sqlparse"
+optional = false
+python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*"
+version = "0.3.1"
+
+[[package]]
+category = "main"
+description = "ANSII Color formatting for output in terminal."
+name = "termcolor"
+optional = false
+python-versions = "*"
+version = "1.1.0"
+
+[[package]]
+category = "main"
+description = "A lil' TOML parser"
+marker = "python_version < \"3.11\""
+name = "tomli"
+optional = false
+python-versions = ">=3.7"
+version = "2.0.1"
+
+[[package]]
+category = "main"
+description = "Style preserving TOML library"
+name = "tomlkit"
+optional = false
+python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*"
+version = "0.5.11"
+
+[[package]]
+category = "main"
+description = "Fast, Extensible Progress Meter"
+name = "tqdm"
+optional = false
+python-versions = ">=2.6, !=3.0.*, !=3.1.*"
+version = "4.46.1"
+
+[package.extras]
+dev = ["py-make (>=0.1.0)", "twine", "argopt", "pydoc-markdown"]
+
+[[package]]
+category = "main"
+description = "Backported and Experimental Type Hints for Python 3.7+"
+name = "typing-extensions"
+optional = false
+python-versions = ">=3.7"
+version = "4.7.1"
+
+[[package]]
+category = "main"
+description = "Ultra fast JSON encoder and decoder for Python"
+name = "ujson"
+optional = false
+python-versions = ">=3.8"
+version = "5.8.0"
+
+[[package]]
+category = "main"
+description = "HTTP library with thread-safe connection pooling, file post, and more."
+name = "urllib3"
+optional = false
+python-versions = ">=3.7"
+version = "2.0.4"
+
+[package.extras]
+brotli = ["brotli (>=1.0.9)", "brotlicffi (>=0.8.0)"]
+secure = ["certifi", "cryptography (>=1.9)", "idna (>=2.0.0)", "pyopenssl (>=17.1.0)", "urllib3-secure-extra"]
+socks = ["pysocks (>=1.5.6,<1.5.7 || >1.5.7,<2.0)"]
+zstd = ["zstandard (>=0.18.0)"]
+
+[[package]]
+category = "main"
+description = "Virtual Python Environment builder"
+name = "virtualenv"
+optional = false
+python-versions = "!=3.0.*,!=3.1.*,!=3.2.*,!=3.3.*,>=2.7"
+version = "20.0.25"
+
+[package.dependencies]
+appdirs = ">=1.4.3,<2"
+distlib = ">=0.3.0,<1"
+filelock = ">=3.0.0,<4"
+six = ">=1.9.0,<2"
+
+[package.extras]
+docs = ["sphinx (>=3)", "sphinx-argparse (>=0.2.5)", "sphinx-rtd-theme (>=0.4.3)", "towncrier (>=19.9.0rc1)", "proselint (>=0.10.2)"]
+testing = ["pytest (>=4)", "coverage (>=5)", "coverage-enable-subprocess (>=1)", "pytest-xdist (>=1.31.0)", "pytest-mock (>=2)", "pytest-env (>=0.6.2)", "pytest-randomly (>=1)", "pytest-timeout (>=1)", "pytest-freezegun (>=0.4.1)", "flaky (>=3)", "packaging (>=20.0)", "xonsh (>=0.9.16)"]
+
+[[package]]
+category = "main"
+description = "Measures the displayed width of unicode strings in a terminal"
+name = "wcwidth"
+optional = false
+python-versions = "*"
+version = "0.2.5"
+
+[[package]]
+category = "main"
+description = "Character encoding aliases for legacy web content"
+name = "webencodings"
+optional = false
+python-versions = "*"
+version = "0.5.1"
+
+[[package]]
+category = "main"
+description = "WebSocket client for Python. hybi13 is supported."
+name = "websocket-client"
+optional = false
+python-versions = ">=2.6, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*"
+version = "0.57.0"
+
+[package.dependencies]
+six = "*"
+
+[[package]]
+category = "main"
+description = "The comprehensive WSGI web application library."
+name = "werkzeug"
+optional = false
+python-versions = ">=3.8"
+version = "2.3.7"
+
+[package.dependencies]
+MarkupSafe = ">=2.1.1"
+
+[package.extras]
+watchdog = ["watchdog (>=2.3)"]
+
+[[package]]
+category = "main"
+description = "Module for decorators, wrappers and monkey patching."
+name = "wrapt"
+optional = false
+python-versions = "*"
+version = "1.12.1"
+
+[[package]]
+category = "main"
+description = "A formatter for Python code."
+name = "yapf"
+optional = false
+python-versions = "*"
+version = "0.25.0"
+
+[[package]]
+category = "main"
+description = "A semi hard Cornish cheese, also queries PyPI (PyPI client)"
+name = "yarg"
+optional = false
+python-versions = "*"
+version = "0.1.9"
+
+[package.dependencies]
+requests = "*"
+
+[[package]]
+category = "main"
+description = "Yet another URL library"
+name = "yarl"
+optional = false
+python-versions = ">=3.7"
+version = "1.9.2"
+
+[package.dependencies]
+idna = ">=2.0"
+multidict = ">=4.0"
+
+[[package]]
+category = "main"
+description = "Yet Another Terminal Spinner"
+name = "yaspin"
+optional = false
+python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*, !=3.4.*"
+version = "0.17.0"
 
 [metadata]
-lock-version = "1.1"
-python-versions = ">=3.8.0,<3.9"
-content-hash = "b549744e56683ad2de06fd4a0958e3459f46c1b7989d5f4f3f69e1eae9e71dfd"
+content-hash = "cbd5c825b7f5303e543bd5c1c0248da2052f5e69bfaa402cb594bc44a99fd270"
+python-versions = ">=3.10, <3.11"
 
 [metadata.files]
+aiohttp = []
+aiosignal = []
+airtable = []
+airtable-python-wrapper = []
+annotated-types = []
+appdirs = []
+astroid = []
+async-timeout = []
+attrs = []
+blessings = []
+blinker = []
+bowler = []
+bpython = []
+cachecontrol = []
+cachy = []
+cerberus = []
+certifi = []
+cffi = []
+chardet = []
+charset-normalizer = []
+cleo = []
+click = []
+clikit = []
+colorama = []
+contourpy = []
+cryptography = []
+cs50 = []
+curtsies = []
+cycler = []
 debugpy = []
-importlib-metadata = []
+dephell = []
+dephell-archive = []
+dephell-discover = []
+dephell-licenses = []
+dephell-links = []
+dephell-markers = []
+dephell-pythons = []
+dephell-shells = []
+dephell-specifier = []
+dephell-venvs = []
+dephell-versioning = []
+distlib = []
+docker = []
+dockerpty = []
+docopt = []
+docutils = []
+filelock = []
+fissix = []
+flask = []
+fonttools = []
+frozenlist = []
+future = []
+glfw = []
+greenlet = []
+gunicorn = []
+html5lib = []
+idna = []
+inflection = []
+isort = []
+itsdangerous = []
 jedi = []
+jeepney = []
+jinja2 = []
+joblib = []
+jsonschema = []
+keyring = []
+kiwisolver = []
+lazy-object-proxy = []
+lockfile = []
+m2r = []
+markupsafe = []
+matplotlib = []
+mccabe = []
+mistune = []
+msgpack = []
+multidict = []
+nltk = []
+numpy = []
 packaging = []
 parso = []
+pastel = []
+pexpect = []
+pillow = []
+pipreqs-amasad = []
+pkginfo = []
 platformdirs = []
 pluggy = []
+ply = []
+poetry = []
+prompt-toolkit = []
+ptpython = []
+ptyprocess = []
+pyairtable = []
+pycodestyle = []
+pycparser = []
+pydantic = []
+pydantic-core = []
 pyflakes = []
-python-lsp-jsonrpc = []
+pygame = []
+pygments = []
+pylev = []
+pylint = []
+pyopengl = []
+pyparsing = []
+pypiwin32 = []
+pyrsistent = []
+python-dateutil = []
+python-dotenv = []
+python-jsonrpc-server = []
+python-language-server = []
 pytoolconfig = []
-replit-python-lsp-server = []
+pywin32 = []
+pywin32-ctypes = []
+pyyaml = []
+regex = []
+replit = []
+requests = []
+requests-toolbelt = []
 rope = []
-toml = []
+scipy = []
+secretstorage = []
+setuptools-scm = []
+sh = []
+shellingham = []
+six = []
+sounddevice = []
+sqlalchemy = []
+sqlparse = []
+termcolor = []
 tomli = []
+tomlkit = []
+tqdm = []
+typing-extensions = []
 ujson = []
 urllib3 = []
-whatthepatch = []
+virtualenv = []
+wcwidth = []
+webencodings = []
+websocket-client = []
+werkzeug = []
+wrapt = []
 yapf = []
-zipp = []
+yarg = []
+yarl = []
+yaspin = []
